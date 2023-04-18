@@ -1,0 +1,50 @@
+C:\Users\franc\OneDrive\Escritorio\Estructuras de datos\ED-Clase2\bin\Debug\ED-Clase2.exe.config
+C:\Users\franc\OneDrive\Escritorio\Estructuras de datos\ED-Clase2\bin\Debug\ED-Clase2.exe
+C:\Users\franc\OneDrive\Escritorio\Estructuras de datos\ED-Clase2\bin\Debug\ED-Clase2.pdb
+C:\Users\franc\OneDrive\Escritorio\Estructuras de datos\ED-Clase2\obj\Debug\ED-Clase2.csproj.AssemblyReference.cache
+C:\Users\franc\OneDrive\Escritorio\Estructuras de datos\ED-Clase2\obj\Debug\ED-Clase2.csproj.SuggestedBindingRedirects.cache
+C:\Users\franc\OneDrive\Escritorio\Estructuras de datos\ED-Clase2\obj\Debug\ED_Clase2.Form1.resources
+C:\Users\franc\OneDrive\Escritorio\Estructuras de datos\ED-Clase2\obj\Debug\ED_Clase2.frmDatos.resources
+C:\Users\franc\OneDrive\Escritorio\Estructuras de datos\ED-Clase2\obj\Debug\ED_Clase2.Properties.Resources.resources
+C:\Users\franc\OneDrive\Escritorio\Estructuras de datos\ED-Clase2\obj\Debug\ED-Clase2.csproj.GenerateResource.cache
+C:\Users\franc\OneDrive\Escritorio\Estructuras de datos\ED-Clase2\obj\Debug\ED-Clase2.csproj.CoreCompileInputs.cache
+C:\Users\franc\OneDrive\Escritorio\Estructuras de datos\ED-Clase2\obj\Debug\ED-Clase2.exe
+C:\Users\franc\OneDrive\Escritorio\Estructuras de datos\ED-Clase2\obj\Debug\ED-Clase2.pdb
+C:\Users\Alumnos\Downloads\Estructura-de-datos-main\ED-Clase2\bin\Debug\ED-Clase2.exe.config
+C:\Users\Alumnos\Downloads\Estructura-de-datos-main\ED-Clase2\bin\Debug\ED-Clase2.exe
+C:\Users\Alumnos\Downloads\Estructura-de-datos-main\ED-Clase2\bin\Debug\ED-Clase2.pdb
+C:\Users\Alumnos\Downloads\Estructura-de-datos-main\ED-Clase2\obj\Debug\ED-Clase2.csproj.AssemblyReference.cache
+C:\Users\Alumnos\Downloads\Estructura-de-datos-main\ED-Clase2\obj\Debug\ED_Clase2.Form1.resources
+C:\Users\Alumnos\Downloads\Estructura-de-datos-main\ED-Clase2\obj\Debug\ED_Clase2.frmDatos.resources
+C:\Users\Alumnos\Downloads\Estructura-de-datos-main\ED-Clase2\obj\Debug\ED_Clase2.frmEstructuraDinamicaLineales.resources
+C:\Users\Alumnos\Downloads\Estructura-de-datos-main\ED-Clase2\obj\Debug\ED_Clase2.Properties.Resources.resources
+C:\Users\Alumnos\Downloads\Estructura-de-datos-main\ED-Clase2\obj\Debug\ED-Clase2.csproj.GenerateResource.cache
+C:\Users\Alumnos\Downloads\Estructura-de-datos-main\ED-Clase2\obj\Debug\ED-Clase2.csproj.CoreCompileInputs.cache
+C:\Users\Alumnos\Downloads\Estructura-de-datos-main\ED-Clase2\obj\Debug\ED-Clase2.exe
+C:\Users\Alumnos\Downloads\Estructura-de-datos-main\ED-Clase2\obj\Debug\ED-Clase2.pdb
+C:\Users\Alumno\Downloads\Estructura-de-datos-main\ED-Clase2\bin\Debug\ED-Clase2.exe.config
+C:\Users\Alumno\Downloads\Estructura-de-datos-main\ED-Clase2\bin\Debug\ED-Clase2.exe
+C:\Users\Alumno\Downloads\Estructura-de-datos-main\ED-Clase2\bin\Debug\ED-Clase2.pdb
+C:\Users\Alumno\Downloads\Estructura-de-datos-main\ED-Clase2\obj\Debug\ED-Clase2.csproj.AssemblyReference.cache
+C:\Users\Alumno\Downloads\Estructura-de-datos-main\ED-Clase2\obj\Debug\ED_Clase2.Form1.resources
+C:\Users\Alumno\Downloads\Estructura-de-datos-main\ED-Clase2\obj\Debug\ED_Clase2.frmDatos.resources
+C:\Users\Alumno\Downloads\Estructura-de-datos-main\ED-Clase2\obj\Debug\ED_Clase2.frmEstructuraDinamicaLineales.resources
+C:\Users\Alumno\Downloads\Estructura-de-datos-main\ED-Clase2\obj\Debug\ED_Clase2.Properties.Resources.resources
+C:\Users\Alumno\Downloads\Estructura-de-datos-main\ED-Clase2\obj\Debug\ED-Clase2.csproj.GenerateResource.cache
+C:\Users\Alumno\Downloads\Estructura-de-datos-main\ED-Clase2\obj\Debug\ED-Clase2.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\Downloads\Estructura-de-datos-main\ED-Clase2\obj\Debug\ED-Clase2.exe
+C:\Users\Alumno\Downloads\Estructura-de-datos-main\ED-Clase2\obj\Debug\ED-Clase2.pdb
+C:\Users\Alumnos\Source\Repos\estructuras-de-datos\bin\Debug\ED-Clase2.exe.config
+C:\Users\Alumnos\Source\Repos\estructuras-de-datos\bin\Debug\ED-Clase2.exe
+C:\Users\Alumnos\Source\Repos\estructuras-de-datos\bin\Debug\ED-Clase2.pdb
+C:\Users\Alumnos\Source\Repos\estructuras-de-datos\obj\Debug\ED-Clase2.csproj.AssemblyReference.cache
+C:\Users\Alumnos\Source\Repos\estructuras-de-datos\obj\Debug\ED-Clase2.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alumnos\Source\Repos\estructuras-de-datos\obj\Debug\ED_Clase2.Form1.resources
+C:\Users\Alumnos\Source\Repos\estructuras-de-datos\obj\Debug\ED_Clase2.frmDatos.resources
+C:\Users\Alumnos\Source\Repos\estructuras-de-datos\obj\Debug\ED_Clase2.frmEstructuraDinamicaLineales.resources
+C:\Users\Alumnos\Source\Repos\estructuras-de-datos\obj\Debug\ED_Clase2.frmPila.resources
+C:\Users\Alumnos\Source\Repos\estructuras-de-datos\obj\Debug\ED_Clase2.Properties.Resources.resources
+C:\Users\Alumnos\Source\Repos\estructuras-de-datos\obj\Debug\ED-Clase2.csproj.GenerateResource.cache
+C:\Users\Alumnos\Source\Repos\estructuras-de-datos\obj\Debug\ED-Clase2.csproj.CoreCompileInputs.cache
+C:\Users\Alumnos\Source\Repos\estructuras-de-datos\obj\Debug\ED-Clase2.exe
+C:\Users\Alumnos\Source\Repos\estructuras-de-datos\obj\Debug\ED-Clase2.pdb
