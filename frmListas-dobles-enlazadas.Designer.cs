@@ -1,7 +1,6 @@
-﻿
-namespace ED_Clase2
+﻿namespace ED_Clase2
 {
-    partial class frm_lista_simple
+    partial class frmListasDobles
     {
         /// <summary>
         /// Required designer variable.
@@ -29,18 +28,16 @@ namespace ED_Clase2
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListasDobles));
             this.grpListayGrilla = new System.Windows.Forms.GroupBox();
-            this.dgvLista = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lstListasimple = new System.Windows.Forms.ListBox();
+            this.dgvListaDoble = new System.Windows.Forms.DataGridView();
+            this.lstListasDoble = new System.Windows.Forms.ListBox();
             this.grpElementoEliminado = new System.Windows.Forms.GroupBox();
-            this.cmbListaSimple = new System.Windows.Forms.ComboBox();
-            this.cmdEliminar = new System.Windows.Forms.Button();
+            this.cmbListaSimpleDoble = new System.Windows.Forms.ComboBox();
+            this.cmdEliminarDoble = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.grpNuevoElemento = new System.Windows.Forms.GroupBox();
-            this.cmdAgregar = new System.Windows.Forms.Button();
+            this.cmdAgregarDobles = new System.Windows.Forms.Button();
             this.txtTramite = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
@@ -48,8 +45,11 @@ namespace ED_Clase2
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpListayGrilla.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).BeginInit();
             this.grpElementoEliminado.SuspendLayout();
             this.grpNuevoElemento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,83 +57,64 @@ namespace ED_Clase2
             // 
             // grpListayGrilla
             // 
-            this.grpListayGrilla.Controls.Add(this.dgvLista);
-            this.grpListayGrilla.Controls.Add(this.lstListasimple);
+            this.grpListayGrilla.Controls.Add(this.dgvListaDoble);
+            this.grpListayGrilla.Controls.Add(this.lstListasDoble);
             this.grpListayGrilla.Location = new System.Drawing.Point(12, 158);
             this.grpListayGrilla.Name = "grpListayGrilla";
             this.grpListayGrilla.Size = new System.Drawing.Size(601, 182);
-            this.grpListayGrilla.TabIndex = 8;
+            this.grpListayGrilla.TabIndex = 12;
             this.grpListayGrilla.TabStop = false;
             this.grpListayGrilla.Text = "Listado en una grilla y lista";
             // 
-            // dgvLista
+            // dgvListaDoble
             // 
-            this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvListaDoble.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaDoble.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgvLista.Location = new System.Drawing.Point(205, 13);
-            this.dgvLista.Name = "dgvLista";
-            this.dgvLista.Size = new System.Drawing.Size(390, 154);
-            this.dgvLista.TabIndex = 1;
+            this.dgvListaDoble.Location = new System.Drawing.Point(205, 13);
+            this.dgvListaDoble.Name = "dgvListaDoble";
+            this.dgvListaDoble.Size = new System.Drawing.Size(390, 154);
+            this.dgvListaDoble.TabIndex = 1;
             // 
-            // Column1
+            // lstListasDoble
             // 
-            this.Column1.HeaderText = "Codgio";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Nombre";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Tramite";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // lstListasimple
-            // 
-            this.lstListasimple.FormattingEnabled = true;
-            this.lstListasimple.Location = new System.Drawing.Point(7, 20);
-            this.lstListasimple.Name = "lstListasimple";
-            this.lstListasimple.Size = new System.Drawing.Size(182, 147);
-            this.lstListasimple.TabIndex = 0;
+            this.lstListasDoble.FormattingEnabled = true;
+            this.lstListasDoble.Location = new System.Drawing.Point(7, 20);
+            this.lstListasDoble.Name = "lstListasDoble";
+            this.lstListasDoble.Size = new System.Drawing.Size(182, 147);
+            this.lstListasDoble.TabIndex = 0;
             // 
             // grpElementoEliminado
             // 
-            this.grpElementoEliminado.Controls.Add(this.cmbListaSimple);
-            this.grpElementoEliminado.Controls.Add(this.cmdEliminar);
+            this.grpElementoEliminado.Controls.Add(this.cmbListaSimpleDoble);
+            this.grpElementoEliminado.Controls.Add(this.cmdEliminarDoble);
             this.grpElementoEliminado.Controls.Add(this.label6);
             this.grpElementoEliminado.Location = new System.Drawing.Point(413, 12);
             this.grpElementoEliminado.Name = "grpElementoEliminado";
             this.grpElementoEliminado.Size = new System.Drawing.Size(200, 140);
-            this.grpElementoEliminado.TabIndex = 9;
+            this.grpElementoEliminado.TabIndex = 13;
             this.grpElementoEliminado.TabStop = false;
             this.grpElementoEliminado.Text = "Elemento Eliminado";
             // 
-            // cmbListaSimple
+            // cmbListaSimpleDoble
             // 
-            this.cmbListaSimple.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbListaSimple.FormattingEnabled = true;
-            this.cmbListaSimple.Location = new System.Drawing.Point(47, 84);
-            this.cmbListaSimple.Name = "cmbListaSimple";
-            this.cmbListaSimple.Size = new System.Drawing.Size(131, 21);
-            this.cmbListaSimple.TabIndex = 8;
+            this.cmbListaSimpleDoble.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbListaSimpleDoble.FormattingEnabled = true;
+            this.cmbListaSimpleDoble.Location = new System.Drawing.Point(47, 84);
+            this.cmbListaSimpleDoble.Name = "cmbListaSimpleDoble";
+            this.cmbListaSimpleDoble.Size = new System.Drawing.Size(131, 21);
+            this.cmbListaSimpleDoble.TabIndex = 8;
             // 
-            // cmdEliminar
+            // cmdEliminarDoble
             // 
-            this.cmdEliminar.Location = new System.Drawing.Point(9, 111);
-            this.cmdEliminar.Name = "cmdEliminar";
-            this.cmdEliminar.Size = new System.Drawing.Size(157, 23);
-            this.cmdEliminar.TabIndex = 7;
-            this.cmdEliminar.Text = "Eliminar";
-            this.cmdEliminar.UseVisualStyleBackColor = true;
-            this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
+            this.cmdEliminarDoble.Location = new System.Drawing.Point(9, 111);
+            this.cmdEliminarDoble.Name = "cmdEliminarDoble";
+            this.cmdEliminarDoble.Size = new System.Drawing.Size(157, 23);
+            this.cmdEliminarDoble.TabIndex = 7;
+            this.cmdEliminarDoble.Text = "Eliminar";
+            this.cmdEliminarDoble.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -146,7 +127,7 @@ namespace ED_Clase2
             // 
             // grpNuevoElemento
             // 
-            this.grpNuevoElemento.Controls.Add(this.cmdAgregar);
+            this.grpNuevoElemento.Controls.Add(this.cmdAgregarDobles);
             this.grpNuevoElemento.Controls.Add(this.txtTramite);
             this.grpNuevoElemento.Controls.Add(this.txtNombre);
             this.grpNuevoElemento.Controls.Add(this.txtCodigo);
@@ -156,19 +137,18 @@ namespace ED_Clase2
             this.grpNuevoElemento.Location = new System.Drawing.Point(207, 12);
             this.grpNuevoElemento.Name = "grpNuevoElemento";
             this.grpNuevoElemento.Size = new System.Drawing.Size(200, 140);
-            this.grpNuevoElemento.TabIndex = 7;
+            this.grpNuevoElemento.TabIndex = 11;
             this.grpNuevoElemento.TabStop = false;
             this.grpNuevoElemento.Text = "Nuevo Elemento";
             // 
-            // cmdAgregar
+            // cmdAgregarDobles
             // 
-            this.cmdAgregar.Location = new System.Drawing.Point(10, 111);
-            this.cmdAgregar.Name = "cmdAgregar";
-            this.cmdAgregar.Size = new System.Drawing.Size(157, 23);
-            this.cmdAgregar.TabIndex = 6;
-            this.cmdAgregar.Text = "Agregar";
-            this.cmdAgregar.UseVisualStyleBackColor = true;
-            this.cmdAgregar.Click += new System.EventHandler(this.cmdAgregar_Click);
+            this.cmdAgregarDobles.Location = new System.Drawing.Point(10, 111);
+            this.cmdAgregarDobles.Name = "cmdAgregarDobles";
+            this.cmdAgregarDobles.Size = new System.Drawing.Size(157, 23);
+            this.cmdAgregarDobles.TabIndex = 6;
+            this.cmdAgregarDobles.Text = "Agregar";
+            this.cmdAgregarDobles.UseVisualStyleBackColor = true;
             // 
             // txtTramite
             // 
@@ -220,28 +200,47 @@ namespace ED_Clase2
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ED_Clase2.Properties.Resources.WhatsApp_Image_2023_04_14_at_11_19_57;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(189, 140);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
-            // frm_lista_simple
+            // Column1
+            // 
+            this.Column1.HeaderText = "Codgio";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 50;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 150;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Tramite";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // frmListasDobles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 406);
+            this.ClientSize = new System.Drawing.Size(624, 350);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.grpListayGrilla);
             this.Controls.Add(this.grpElementoEliminado);
             this.Controls.Add(this.grpNuevoElemento);
-            this.Name = "frm_lista_simple";
-            this.Text = "Lista simple";
-            this.Load += new System.EventHandler(this.frm_lista_simple_Load);
+            this.Name = "frmListasDobles";
+            this.Text = "Listas dobles enlazadas";
             this.grpListayGrilla.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).EndInit();
             this.grpElementoEliminado.ResumeLayout(false);
             this.grpElementoEliminado.PerformLayout();
             this.grpNuevoElemento.ResumeLayout(false);
@@ -252,25 +251,24 @@ namespace ED_Clase2
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox grpListayGrilla;
-        private System.Windows.Forms.DataGridView dgvLista;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.ListBox lstListasimple;
+        private System.Windows.Forms.DataGridView dgvListaDoble;
+        private System.Windows.Forms.ListBox lstListasDoble;
         private System.Windows.Forms.GroupBox grpElementoEliminado;
-        private System.Windows.Forms.ComboBox cmbListaSimple;
-        private System.Windows.Forms.Button cmdEliminar;
+        private System.Windows.Forms.ComboBox cmbListaSimpleDoble;
+        private System.Windows.Forms.Button cmdEliminarDoble;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox grpNuevoElemento;
-        private System.Windows.Forms.Button cmdAgregar;
+        private System.Windows.Forms.Button cmdAgregarDobles;
         private System.Windows.Forms.TextBox txtTramite;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

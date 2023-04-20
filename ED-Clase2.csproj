@@ -67,11 +67,11 @@
     <Compile Include="frm-lista-simple.Designer.cs">
       <DependentUpon>frm-lista-simple.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEstructuraDinamicaLineales.cs">
+    <Compile Include="frmCola.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEstructuraDinamicaLineales.Designer.cs">
-      <DependentUpon>frmEstructuraDinamicaLineales.cs</DependentUpon>
+    <Compile Include="frmCola.Designer.cs">
+      <DependentUpon>frmCola.cs</DependentUpon>
     </Compile>
     <Compile Include="clsNodo.cs" />
     <Compile Include="frmPila.cs">
@@ -79,6 +79,12 @@
     </Compile>
     <Compile Include="frmPila.Designer.cs">
       <DependentUpon>frmPila.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListas-dobles-enlazadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListas-dobles-enlazadas.Designer.cs">
+      <DependentUpon>frmListas-dobles-enlazadas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,11 +97,14 @@
     <EmbeddedResource Include="frm-lista-simple.resx">
       <DependentUpon>frm-lista-simple.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEstructuraDinamicaLineales.resx">
-      <DependentUpon>frmEstructuraDinamicaLineales.cs</DependentUpon>
+    <EmbeddedResource Include="frmCola.resx">
+      <DependentUpon>frmCola.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPila.resx">
       <DependentUpon>frmPila.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListas-dobles-enlazadas.resx">
+      <DependentUpon>frmListas-dobles-enlazadas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -105,6 +114,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -118,6 +128,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2023-04-14 at 10.36.07.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2023-04-14 at 11.19.57.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

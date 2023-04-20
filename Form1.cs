@@ -25,7 +25,7 @@ namespace ED_Clase2
 
         private void colaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmEstructuraDinamicaLineales objVentanaCola = new frmEstructuraDinamicaLineales();
+            frmCola objVentanaCola = new frmCola();
             objVentanaCola.ShowDialog();
         }
 
@@ -39,6 +39,12 @@ namespace ED_Clase2
         {
             frm_lista_simple objVentaSimple = new frm_lista_simple();
             objVentaSimple.ShowDialog();
+        }
+
+        private void doblesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListasDobles objVentana = new frmListasDobles();
+            objVentana.ShowDialog();
         }
     }
 }
