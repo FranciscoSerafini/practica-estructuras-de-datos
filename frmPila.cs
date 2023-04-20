@@ -20,9 +20,6 @@ namespace ED_Clase2
         clsPila FilaDePersonar = new clsPila();
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
-           
-            
-            
                 clsNodo objNodo = new clsNodo();
 
                 objNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
@@ -36,8 +33,6 @@ namespace ED_Clase2
                 txtCodigo.Text = "";
                 txtNombre.Text = "";
                 txtTramite.Text = "";
-
-
 
         }
 

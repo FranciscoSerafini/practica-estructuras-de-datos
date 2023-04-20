@@ -34,5 +34,11 @@ namespace ED_Clase2
             frmPila objVentanaPila = new frmPila();
             objVentanaPila.ShowDialog();
         }
+
+        private void simplesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_lista_simple objVentaSimple = new frm_lista_simple();
+            objVentaSimple.ShowDialog();
+        }
     }
 }
