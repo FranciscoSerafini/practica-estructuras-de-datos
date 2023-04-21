@@ -30,6 +30,9 @@
         {
             this.grpListayGrilla = new System.Windows.Forms.GroupBox();
             this.dgvListaDoble = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lstListasDoble = new System.Windows.Forms.ListBox();
             this.grpElementoEliminado = new System.Windows.Forms.GroupBox();
             this.cmbListaSimpleDoble = new System.Windows.Forms.ComboBox();
@@ -44,12 +47,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpListaDAtos = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rtnDescendente = new System.Windows.Forms.RadioButton();
+            this.rbtnAscendete = new System.Windows.Forms.RadioButton();
             this.grpListayGrilla.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).BeginInit();
             this.grpElementoEliminado.SuspendLayout();
@@ -80,6 +80,27 @@
             this.dgvListaDoble.Name = "dgvListaDoble";
             this.dgvListaDoble.Size = new System.Drawing.Size(390, 154);
             this.dgvListaDoble.TabIndex = 1;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Codgio";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 50;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 150;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Tramite";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
             // 
             // lstListasDoble
             // 
@@ -213,31 +234,10 @@
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Codgio";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 50;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Nombre";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 150;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Tramite";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 150;
-            // 
             // grpListaDAtos
             // 
-            this.grpListaDAtos.Controls.Add(this.radioButton2);
-            this.grpListaDAtos.Controls.Add(this.radioButton1);
+            this.grpListaDAtos.Controls.Add(this.rtnDescendente);
+            this.grpListaDAtos.Controls.Add(this.rbtnAscendete);
             this.grpListaDAtos.Location = new System.Drawing.Point(416, 158);
             this.grpListaDAtos.Name = "grpListaDAtos";
             this.grpListaDAtos.Size = new System.Drawing.Size(200, 71);
@@ -245,27 +245,29 @@
             this.grpListaDAtos.TabStop = false;
             this.grpListaDAtos.Text = "Listar Datos";
             // 
-            // radioButton1
+            // rtnDescendente
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 19);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(82, 17);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Ascendente";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rtnDescendente.AutoSize = true;
+            this.rtnDescendente.Location = new System.Drawing.Point(6, 42);
+            this.rtnDescendente.Name = "rtnDescendente";
+            this.rtnDescendente.Size = new System.Drawing.Size(89, 17);
+            this.rtnDescendente.TabIndex = 3;
+            this.rtnDescendente.TabStop = true;
+            this.rtnDescendente.Text = "Descendente";
+            this.rtnDescendente.UseVisualStyleBackColor = true;
+            this.rtnDescendente.CheckedChanged += new System.EventHandler(this.rtnDescendente_CheckedChanged);
             // 
-            // radioButton2
+            // rbtnAscendete
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 42);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(89, 17);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Descendente";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbtnAscendete.AutoSize = true;
+            this.rbtnAscendete.Location = new System.Drawing.Point(6, 19);
+            this.rbtnAscendete.Name = "rbtnAscendete";
+            this.rbtnAscendete.Size = new System.Drawing.Size(82, 17);
+            this.rbtnAscendete.TabIndex = 2;
+            this.rbtnAscendete.TabStop = true;
+            this.rbtnAscendete.Text = "Ascendente";
+            this.rbtnAscendete.UseVisualStyleBackColor = true;
+            this.rbtnAscendete.CheckedChanged += new System.EventHandler(this.rbtnAscendete_CheckedChanged);
             // 
             // frmListasDobles
             // 
@@ -279,6 +281,7 @@
             this.Controls.Add(this.grpNuevoElemento);
             this.Name = "frmListasDobles";
             this.Text = "Listas dobles enlazadas";
+            this.Load += new System.EventHandler(this.frmListasDobles_Load);
             this.grpListayGrilla.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).EndInit();
             this.grpElementoEliminado.ResumeLayout(false);
@@ -313,7 +316,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.GroupBox grpListaDAtos;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rtnDescendente;
+        private System.Windows.Forms.RadioButton rbtnAscendete;
     }
 }

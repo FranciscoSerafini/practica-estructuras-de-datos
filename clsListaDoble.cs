@@ -102,6 +102,41 @@ namespace ED_Clase2
             }
        
         }
+        public void RecorrerDes(DataGridView Grilla)
+        {
+            clsNodo aux = Ultimo;
+            Grilla.Rows.Clear();
+            while (aux != null)
+            {
+                Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
+                aux = aux.Anterior;
+            }
+        }
+
+
+
+        public void RecorrerDes(ListBox Lista)
+        {
+            clsNodo aux = Ultimo;
+            Lista.Items.Clear();
+            while (aux != null)
+            {
+                Lista.Items.Add(aux.Codigo + " " + aux.Nombre + " " + aux.Tramite);
+                aux = aux.Anterior;
+            }
+        }
+
+        public void RecorrerDes(ComboBox Combo)
+        {
+            clsNodo aux = Ultimo;
+            Combo.Items.Clear();
+            while (aux != null)
+            {
+                Combo.Items.Add(aux.Codigo);
+                aux = aux.Anterior;
+            }
+
+        }
         public void Eliminar(Int32 Codigo)
         {
             if (Primero.Codigo == Codigo && Ultimo == Primero)

@@ -49,5 +49,27 @@ namespace ED_Clase2
 
             }
         }
+
+        private void rbtnAscendete_CheckedChanged(object sender, EventArgs e)
+        {
+           
+
+            Lista.Recorrer(dgvListaDoble);
+            Lista.Recorrer(lstListasDoble);
+            Lista.Recorrer(cmbListaSimpleDoble);
+
+        }
+
+        private void frmListasDobles_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void rtnDescendente_CheckedChanged(object sender, EventArgs e)
+        {
+            Lista.RecorrerDes(dgvListaDoble);
+            Lista.RecorrerDes(lstListasDoble);
+            Lista.RecorrerDes(cmbListaSimpleDoble);
+        }
     }
 }
