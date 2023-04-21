@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListasDobles));
             this.grpListayGrilla = new System.Windows.Forms.GroupBox();
             this.dgvListaDoble = new System.Windows.Forms.DataGridView();
             this.lstListasDoble = new System.Windows.Forms.ListBox();
@@ -48,18 +47,22 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grpListaDAtos = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.grpListayGrilla.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).BeginInit();
             this.grpElementoEliminado.SuspendLayout();
             this.grpNuevoElemento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.grpListaDAtos.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpListayGrilla
             // 
             this.grpListayGrilla.Controls.Add(this.dgvListaDoble);
             this.grpListayGrilla.Controls.Add(this.lstListasDoble);
-            this.grpListayGrilla.Location = new System.Drawing.Point(12, 158);
+            this.grpListayGrilla.Location = new System.Drawing.Point(11, 306);
             this.grpListayGrilla.Name = "grpListayGrilla";
             this.grpListayGrilla.Size = new System.Drawing.Size(601, 182);
             this.grpListayGrilla.TabIndex = 12;
@@ -115,6 +118,7 @@
             this.cmdEliminarDoble.TabIndex = 7;
             this.cmdEliminarDoble.Text = "Eliminar";
             this.cmdEliminarDoble.UseVisualStyleBackColor = true;
+            this.cmdEliminarDoble.Click += new System.EventHandler(this.cmdEliminarDoble_Click);
             // 
             // label6
             // 
@@ -149,6 +153,7 @@
             this.cmdAgregarDobles.TabIndex = 6;
             this.cmdAgregarDobles.Text = "Agregar";
             this.cmdAgregarDobles.UseVisualStyleBackColor = true;
+            this.cmdAgregarDobles.Click += new System.EventHandler(this.cmdAgregarDobles_Click);
             // 
             // txtTramite
             // 
@@ -166,9 +171,9 @@
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(64, 19);
+            this.txtCodigo.Location = new System.Drawing.Point(86, 19);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(78, 20);
             this.txtCodigo.TabIndex = 3;
             // 
             // label3
@@ -200,7 +205,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::ED_Clase2.Properties.Resources.WhatsApp_Image_2023_04_14_at_11_19_57;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(189, 140);
@@ -227,12 +232,47 @@
             this.Column3.HeaderText = "Tramite";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
+            // 
+            // grpListaDAtos
+            // 
+            this.grpListaDAtos.Controls.Add(this.radioButton2);
+            this.grpListaDAtos.Controls.Add(this.radioButton1);
+            this.grpListaDAtos.Location = new System.Drawing.Point(416, 158);
+            this.grpListaDAtos.Name = "grpListaDAtos";
+            this.grpListaDAtos.Size = new System.Drawing.Size(200, 71);
+            this.grpListaDAtos.TabIndex = 15;
+            this.grpListaDAtos.TabStop = false;
+            this.grpListaDAtos.Text = "Listar Datos";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(6, 19);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(82, 17);
+            this.radioButton1.TabIndex = 2;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Ascendente";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(6, 42);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(89, 17);
+            this.radioButton2.TabIndex = 3;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Descendente";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // frmListasDobles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 350);
+            this.ClientSize = new System.Drawing.Size(624, 500);
+            this.Controls.Add(this.grpListaDAtos);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.grpListayGrilla);
             this.Controls.Add(this.grpElementoEliminado);
@@ -246,6 +286,8 @@
             this.grpNuevoElemento.ResumeLayout(false);
             this.grpNuevoElemento.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.grpListaDAtos.ResumeLayout(false);
+            this.grpListaDAtos.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -270,5 +312,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.GroupBox grpListaDAtos;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

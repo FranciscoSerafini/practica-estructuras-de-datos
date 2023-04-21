@@ -14,7 +14,7 @@ namespace ED_Clase2
         private String tra;
         private clsNodo sig;
         private clsNodo ant;
-
+        //propiedades del Nodo
         public Int32 Codigo
         {
             get { return cod; }
@@ -36,6 +36,12 @@ namespace ED_Clase2
         {
             get { return sig; }
             set { sig = value; }
+
+        }
+        public clsNodo Anterior
+        {
+            get { return ant; }
+            set { ant = value; }
         }
 
     }

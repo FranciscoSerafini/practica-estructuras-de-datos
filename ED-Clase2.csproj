@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="clsCola.cs" />
     <Compile Include="clsLista-Simple.cs" />
+    <Compile Include="clsListaDoble.cs" />
     <Compile Include="clsPila.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
