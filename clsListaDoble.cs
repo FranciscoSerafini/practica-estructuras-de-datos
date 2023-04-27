@@ -139,6 +139,8 @@ namespace ED_Clase2
         }
         public void Eliminar(Int32 Codigo)
         {
+            //si el dato que borro es el unico de la lista 
+
             if (Primero.Codigo == Codigo && Ultimo == Primero)
             {
                 Primero = null;
@@ -146,6 +148,7 @@ namespace ED_Clase2
             }
             else
             {
+                //si el codigo que quiero borrar es el PRIMERO
                 if (Primero.Codigo == Codigo)
                 {
                     Primero = Primero.Siguiente;
@@ -153,6 +156,7 @@ namespace ED_Clase2
                 }
                 else
                 {
+                   //si el codigo que quiero borrar es el ULTIMO
                     if (Ultimo.Codigo == Codigo)
                     {
                         Ultimo = Ultimo.Anterior;
@@ -160,9 +164,10 @@ namespace ED_Clase2
                     }
                     else
                     {
+                        //borramos el INTERMEDIO
                         clsNodo Aux = Primero;
                         clsNodo Ant = Primero;
-                        while (Aux.Codigo < Codigo)
+                        while (Aux.Codigo < Codigo)//busqueda secuencial
                         {
                             Ant = Aux;
                             Aux = Aux.Siguiente;
