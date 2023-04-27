@@ -62,7 +62,7 @@
             // 
             this.grpListayGrilla.Controls.Add(this.dgvListaDoble);
             this.grpListayGrilla.Controls.Add(this.lstListasDoble);
-            this.grpListayGrilla.Location = new System.Drawing.Point(11, 306);
+            this.grpListayGrilla.Location = new System.Drawing.Point(11, 235);
             this.grpListayGrilla.Name = "grpListayGrilla";
             this.grpListayGrilla.Size = new System.Drawing.Size(601, 182);
             this.grpListayGrilla.TabIndex = 12;
@@ -126,14 +126,14 @@
             // 
             this.cmbListaSimpleDoble.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbListaSimpleDoble.FormattingEnabled = true;
-            this.cmbListaSimpleDoble.Location = new System.Drawing.Point(47, 84);
+            this.cmbListaSimpleDoble.Location = new System.Drawing.Point(52, 18);
             this.cmbListaSimpleDoble.Name = "cmbListaSimpleDoble";
             this.cmbListaSimpleDoble.Size = new System.Drawing.Size(131, 21);
             this.cmbListaSimpleDoble.TabIndex = 8;
             // 
             // cmdEliminarDoble
             // 
-            this.cmdEliminarDoble.Location = new System.Drawing.Point(9, 111);
+            this.cmdEliminarDoble.Location = new System.Drawing.Point(26, 47);
             this.cmdEliminarDoble.Name = "cmdEliminarDoble";
             this.cmdEliminarDoble.Size = new System.Drawing.Size(157, 23);
             this.cmdEliminarDoble.TabIndex = 7;
@@ -144,7 +144,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(0, 84);
+            this.label6.Location = new System.Drawing.Point(6, 19);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 3;
@@ -238,7 +238,7 @@
             // 
             this.grpListaDAtos.Controls.Add(this.rtnDescendente);
             this.grpListaDAtos.Controls.Add(this.rbtnAscendete);
-            this.grpListaDAtos.Location = new System.Drawing.Point(416, 158);
+            this.grpListaDAtos.Location = new System.Drawing.Point(413, 158);
             this.grpListaDAtos.Name = "grpListaDAtos";
             this.grpListaDAtos.Size = new System.Drawing.Size(200, 71);
             this.grpListaDAtos.TabIndex = 15;
@@ -273,7 +273,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 500);
+            this.ClientSize = new System.Drawing.Size(624, 427);
             this.Controls.Add(this.grpListaDAtos);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.grpListayGrilla);

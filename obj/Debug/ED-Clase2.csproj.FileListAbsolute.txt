@@ -96,3 +96,4 @@ C:\Users\Alumnos\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED-Clase2.
 C:\Users\Alumno\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED-Clase2.csproj.SuggestedBindingRedirects.cache
 C:\Users\Alumno\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED_Clase2.frmCola.resources
 C:\Users\Alumno\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED_Clase2.frmListasDobles.resources
+C:\Users\franc\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED_Clase2.frm_Estructuras_Ramificadas.resources

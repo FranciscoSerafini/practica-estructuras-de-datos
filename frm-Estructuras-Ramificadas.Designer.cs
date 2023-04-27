@@ -180,6 +180,7 @@
             this.cmdAgregar.TabIndex = 6;
             this.cmdAgregar.Text = "Agregar";
             this.cmdAgregar.UseVisualStyleBackColor = true;
+            this.cmdAgregar.Click += new System.EventHandler(this.cmdAgregar_Click);
             // 
             // txtTramite
             // 
