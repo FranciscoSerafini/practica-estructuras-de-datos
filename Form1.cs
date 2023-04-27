@@ -46,5 +46,11 @@ namespace ED_Clase2
             frmListasDobles objVentana = new frmListasDobles();
             objVentana.ShowDialog();
         }
+
+        private void arbolBinarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_Estructuras_Ramificadas objVentanaEstructuras = new frm_Estructuras_Ramificadas();
+            objVentanaEstructuras.ShowDialog();
+        }
     }
 }
