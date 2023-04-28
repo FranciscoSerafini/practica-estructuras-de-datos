@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -55,27 +56,25 @@ namespace ED_Clase2
         }
         public void Recorrer(DataGridView Grilla)
         {
-            clsNodo aux = Inicio;
             Grilla.Rows.Clear();
-            while (aux != null)
-            {
-                Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
-                aux = aux.Siguiente;
-            }
+            InOrdenAsc(Grilla, Raiz);
         }
-
-
-
-        public void Recorrer(ListBox Lista)
+        public void InOrdenAsc(DataGridView gri, clsNodo R)
         {
-            clsNodo aux = Inicio;
-            Lista.Items.Clear();
-            while (aux != null)
+            if (R.Izquierda != null)
             {
-                Lista.Items.Add(aux.Codigo + " " + aux.Nombre + " " + aux.Tramite);
-                aux = aux.Siguiente;
+                InOrdenAsc(gri, R.Izquierda);
+            }
+            gri.Rows.Add(R.Codigo);
+            if (R.Derecha != null)
+            {
+                InOrdenAsc(gri, R.Derecha);
             }
         }
+
+
+
+
 
         public void Recorrer(ComboBox Combo)
         {
@@ -88,5 +87,24 @@ namespace ED_Clase2
             }
 
         }
+        public void Recorrer(ListBox Lista) //lista
+        {
+            Lista.Items.Clear();
+            InOrdenAsc(Lista, Raiz);
+
+        }
+        public void InOrdenAsc(ListBox Lst, clsNodo R)
+        {
+            if (R.Izquierda != null)
+            {
+                InOrdenAsc(Lst, R.Izquierda);
+            }
+            Lst.Items.Add(R.Codigo);
+            if (R.Derecha != null)
+            {
+                InOrdenAsc(Lst, R.Derecha);
+            }
+        }
+        
     }
 }
