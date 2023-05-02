@@ -38,16 +38,7 @@ namespace ED_Clase2
 
         private void cmdEliminarDoble_Click(object sender, EventArgs e)
         {
-            if (Lista.Primero != null)
-            {
-                Int32 codigo = Convert.ToInt32(cmbListaSimpleDoble.Text);
-                Lista.Eliminar(codigo);
-                Lista.Recorrer(dgvListaDoble);
-                Lista.Recorrer(lstListasDoble);
-                Lista.Recorrer(cmbListaSimpleDoble);
-
-
-            }
+            
         }
 
         private void rbtnAscendete_CheckedChanged(object sender, EventArgs e)
