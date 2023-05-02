@@ -33,7 +33,7 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lstListasRamificada = new System.Windows.Forms.ListBox();
+            this.lstLista = new System.Windows.Forms.ListBox();
             this.grpElementoEliminado = new System.Windows.Forms.GroupBox();
             this.cmbEstructurasRamificadas = new System.Windows.Forms.ComboBox();
             this.cmdEliminar = new System.Windows.Forms.Button();
@@ -57,11 +57,11 @@
             // grpListayGrilla
             // 
             this.grpListayGrilla.Controls.Add(this.dgvListaRamificada);
-            this.grpListayGrilla.Controls.Add(this.lstListasRamificada);
+            this.grpListayGrilla.Controls.Add(this.lstLista);
             this.grpListayGrilla.Location = new System.Drawing.Point(16, 194);
-            this.grpListayGrilla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpListayGrilla.Margin = new System.Windows.Forms.Padding(4);
             this.grpListayGrilla.Name = "grpListayGrilla";
-            this.grpListayGrilla.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpListayGrilla.Padding = new System.Windows.Forms.Padding(4);
             this.grpListayGrilla.Size = new System.Drawing.Size(801, 224);
             this.grpListayGrilla.TabIndex = 12;
             this.grpListayGrilla.TabStop = false;
@@ -75,7 +75,7 @@
             this.Column2,
             this.Column3});
             this.dgvListaRamificada.Location = new System.Drawing.Point(273, 16);
-            this.dgvListaRamificada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvListaRamificada.Margin = new System.Windows.Forms.Padding(4);
             this.dgvListaRamificada.Name = "dgvListaRamificada";
             this.dgvListaRamificada.Size = new System.Drawing.Size(520, 190);
             this.dgvListaRamificada.TabIndex = 1;
@@ -98,15 +98,15 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
-            // lstListasRamificada
+            // lstLista
             // 
-            this.lstListasRamificada.FormattingEnabled = true;
-            this.lstListasRamificada.ItemHeight = 16;
-            this.lstListasRamificada.Location = new System.Drawing.Point(9, 25);
-            this.lstListasRamificada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.lstListasRamificada.Name = "lstListasRamificada";
-            this.lstListasRamificada.Size = new System.Drawing.Size(241, 180);
-            this.lstListasRamificada.TabIndex = 0;
+            this.lstLista.FormattingEnabled = true;
+            this.lstLista.ItemHeight = 16;
+            this.lstLista.Location = new System.Drawing.Point(9, 25);
+            this.lstLista.Margin = new System.Windows.Forms.Padding(4);
+            this.lstLista.Name = "lstLista";
+            this.lstLista.Size = new System.Drawing.Size(241, 180);
+            this.lstLista.TabIndex = 0;
             // 
             // grpElementoEliminado
             // 
@@ -114,9 +114,9 @@
             this.grpElementoEliminado.Controls.Add(this.cmdEliminar);
             this.grpElementoEliminado.Controls.Add(this.label6);
             this.grpElementoEliminado.Location = new System.Drawing.Point(551, 15);
-            this.grpElementoEliminado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpElementoEliminado.Margin = new System.Windows.Forms.Padding(4);
             this.grpElementoEliminado.Name = "grpElementoEliminado";
-            this.grpElementoEliminado.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpElementoEliminado.Padding = new System.Windows.Forms.Padding(4);
             this.grpElementoEliminado.Size = new System.Drawing.Size(267, 172);
             this.grpElementoEliminado.TabIndex = 13;
             this.grpElementoEliminado.TabStop = false;
@@ -127,7 +127,7 @@
             this.cmbEstructurasRamificadas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstructurasRamificadas.FormattingEnabled = true;
             this.cmbEstructurasRamificadas.Location = new System.Drawing.Point(84, 27);
-            this.cmbEstructurasRamificadas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbEstructurasRamificadas.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEstructurasRamificadas.Name = "cmbEstructurasRamificadas";
             this.cmbEstructurasRamificadas.Size = new System.Drawing.Size(173, 24);
             this.cmbEstructurasRamificadas.TabIndex = 8;
@@ -135,7 +135,7 @@
             // cmdEliminar
             // 
             this.cmdEliminar.Location = new System.Drawing.Point(49, 64);
-            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(209, 28);
             this.cmdEliminar.TabIndex = 7;
@@ -163,9 +163,9 @@
             this.grpNuevoElemento.Controls.Add(this.label2);
             this.grpNuevoElemento.Controls.Add(this.label1);
             this.grpNuevoElemento.Location = new System.Drawing.Point(276, 15);
-            this.grpNuevoElemento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpNuevoElemento.Margin = new System.Windows.Forms.Padding(4);
             this.grpNuevoElemento.Name = "grpNuevoElemento";
-            this.grpNuevoElemento.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpNuevoElemento.Padding = new System.Windows.Forms.Padding(4);
             this.grpNuevoElemento.Size = new System.Drawing.Size(267, 172);
             this.grpNuevoElemento.TabIndex = 11;
             this.grpNuevoElemento.TabStop = false;
@@ -174,7 +174,7 @@
             // cmdAgregar
             // 
             this.cmdAgregar.Location = new System.Drawing.Point(13, 137);
-            this.cmdAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmdAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.cmdAgregar.Name = "cmdAgregar";
             this.cmdAgregar.Size = new System.Drawing.Size(209, 28);
             this.cmdAgregar.TabIndex = 6;
@@ -185,7 +185,7 @@
             // txtTramite
             // 
             this.txtTramite.Location = new System.Drawing.Point(85, 95);
-            this.txtTramite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTramite.Margin = new System.Windows.Forms.Padding(4);
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(132, 22);
             this.txtTramite.TabIndex = 5;
@@ -193,7 +193,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(85, 60);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(132, 22);
             this.txtNombre.TabIndex = 4;
@@ -201,7 +201,7 @@
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(85, 23);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(132, 22);
             this.txtCodigo.TabIndex = 3;
@@ -260,7 +260,7 @@
             this.Controls.Add(this.grpElementoEliminado);
             this.Controls.Add(this.grpNuevoElemento);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Estructuras_Ramificadas";
             this.Text = "Estructuras Ramificadas - Arbol Binario";
             this.grpListayGrilla.ResumeLayout(false);
@@ -282,7 +282,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.ListBox lstListasRamificada;
+        private System.Windows.Forms.ListBox lstLista;
         private System.Windows.Forms.GroupBox grpElementoEliminado;
         private System.Windows.Forms.ComboBox cmbEstructurasRamificadas;
         private System.Windows.Forms.Button cmdEliminar;

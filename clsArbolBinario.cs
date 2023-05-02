@@ -54,24 +54,45 @@ namespace ED_Clase2
                 }
             }
         }
+       
+        
+
+        //InOrdenAsc Lista
+        public void InOrdenAsc(ListBox Lst, clsNodo R)
+        {
+            if (R.Izquierda != null) InOrdenAsc(Lst, R.Izquierda); //izquierda
+            Lst.Items.Add(R.Codigo); //raiz
+            if (R.Derecha != null) InOrdenAsc(Lst, R.Derecha); //derecha
+        }
+
+        //InOrdenAsc Combo
+        public void InOrdenAsc(ComboBox Combo, clsNodo R)
+        {
+            if (R.Izquierda != null) InOrdenAsc(Combo, R.Izquierda); //izquierda
+            Combo.Items.Add(R.Codigo); //raiz
+            if (R.Derecha != null) InOrdenAsc(Combo, R.Derecha); //derecha
+        }
+
+        //InOrdenAsc Grilla
+        public void InOrdenAsc(DataGridView dgvArbolBinario, clsNodo R)
+        {
+            if (R.Izquierda != null) InOrdenAsc(dgvArbolBinario, R.Izquierda); //izquierda
+            dgvArbolBinario.Rows.Add(R.Codigo); //raiz
+            if (R.Derecha != null) InOrdenAsc(dgvArbolBinario, R.Derecha); //derecha
+        }
+
         public void Recorrer(DataGridView Grilla)
         {
             Grilla.Rows.Clear();
             InOrdenAsc(Grilla, Raiz);
         }
-        public void InOrdenAsc(DataGridView gri, clsNodo R)
-        {
-            if (R.Izquierda != null)
-            {
-                InOrdenAsc(gri, R.Izquierda);
-            }
-            gri.Rows.Add(R.Codigo);
-            if (R.Derecha != null)
-            {
-                InOrdenAsc(gri, R.Derecha);
-            }
-        }
 
+        //InOrdenAsc Recorrer Lista
+        public void Recorrer(ListBox Lista)
+        {
+            Lista.Items.Clear();
+            InOrdenAsc(Lista, Raiz);
+        }
 
 
 
@@ -87,24 +108,7 @@ namespace ED_Clase2
             }
 
         }
-        public void Recorrer(ListBox Lista) //lista
-        {
-            Lista.Items.Clear();
-            InOrdenAsc(Lista, Raiz);
-
-        }
-        public void InOrdenAsc(ListBox Lst, clsNodo R)
-        {
-            if (R.Izquierda != null)
-            {
-                InOrdenAsc(Lst, R.Izquierda);
-            }
-            Lst.Items.Add(R.Codigo);
-            if (R.Derecha != null)
-            {
-                InOrdenAsc(Lst, R.Derecha);
-            }
-        }
+       
         
     }
 }

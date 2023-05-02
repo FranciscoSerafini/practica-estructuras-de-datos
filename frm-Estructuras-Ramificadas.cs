@@ -28,7 +28,7 @@ namespace ED_Clase2
 
             Arbol.Agregar(objNodo);
             Arbol.Recorrer(dgvListaRamificada);
-            Arbol.Recorrer(lstListasRamificada);
+            Arbol.Recorrer(lstLista);
             Arbol.Recorrer(cmbEstructurasRamificadas);
 
             txtCodigo.Text = "";
