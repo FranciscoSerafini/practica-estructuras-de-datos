@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.grpListayGrilla = new System.Windows.Forms.GroupBox();
+            this.TVarbolbinario = new System.Windows.Forms.TreeView();
             this.dgvListaRamificada = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,21 +48,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.gbTipoOrden = new System.Windows.Forms.GroupBox();
+            this.grpTipoDeOrden = new System.Windows.Forms.GroupBox();
             this.btnPostOrden = new System.Windows.Forms.RadioButton();
             this.btnPreOrden = new System.Windows.Forms.RadioButton();
             this.btnInOrden = new System.Windows.Forms.RadioButton();
-            this.gbAscDes = new System.Windows.Forms.GroupBox();
+            this.GrpListarDatos = new System.Windows.Forms.GroupBox();
             this.btnDescendente = new System.Windows.Forms.RadioButton();
             this.btnAscendente = new System.Windows.Forms.RadioButton();
-            this.TVarbolbinario = new System.Windows.Forms.TreeView();
             this.grpListayGrilla.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaRamificada)).BeginInit();
             this.grpElementoEliminado.SuspendLayout();
             this.grpNuevoElemento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.gbTipoOrden.SuspendLayout();
-            this.gbAscDes.SuspendLayout();
+            this.grpTipoDeOrden.SuspendLayout();
+            this.GrpListarDatos.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpListayGrilla
@@ -78,6 +78,16 @@
             this.grpListayGrilla.TabStop = false;
             this.grpListayGrilla.Text = "Listado en una grilla y lista";
             // 
+            // TVarbolbinario
+            // 
+            this.TVarbolbinario.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TVarbolbinario.Location = new System.Drawing.Point(664, 20);
+            this.TVarbolbinario.Margin = new System.Windows.Forms.Padding(2);
+            this.TVarbolbinario.Name = "TVarbolbinario";
+            this.TVarbolbinario.Size = new System.Drawing.Size(231, 252);
+            this.TVarbolbinario.TabIndex = 19;
+            this.TVarbolbinario.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TVarbolbinario_AfterSelect);
+            // 
             // dgvListaRamificada
             // 
             this.dgvListaRamificada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -90,6 +100,7 @@
             this.dgvListaRamificada.Name = "dgvListaRamificada";
             this.dgvListaRamificada.Size = new System.Drawing.Size(351, 252);
             this.dgvListaRamificada.TabIndex = 1;
+            this.dgvListaRamificada.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaRamificada_CellContentClick);
             // 
             // Column1
             // 
@@ -118,6 +129,7 @@
             this.lstLista.Name = "lstLista";
             this.lstLista.Size = new System.Drawing.Size(289, 244);
             this.lstLista.TabIndex = 0;
+            this.lstLista.SelectedIndexChanged += new System.EventHandler(this.lstLista_SelectedIndexChanged);
             // 
             // grpElementoEliminado
             // 
@@ -133,6 +145,7 @@
             this.grpElementoEliminado.TabIndex = 13;
             this.grpElementoEliminado.TabStop = false;
             this.grpElementoEliminado.Text = "Elemento Eliminado";
+            this.grpElementoEliminado.Enter += new System.EventHandler(this.grpElementoEliminado_Enter);
             // 
             // cmbEstructurasRamificadas
             // 
@@ -143,9 +156,11 @@
             this.cmbEstructurasRamificadas.Name = "cmbEstructurasRamificadas";
             this.cmbEstructurasRamificadas.Size = new System.Drawing.Size(194, 27);
             this.cmbEstructurasRamificadas.TabIndex = 8;
+            this.cmbEstructurasRamificadas.SelectedIndexChanged += new System.EventHandler(this.cmbEstructurasRamificadas_SelectedIndexChanged);
             // 
             // cmdEliminar
             // 
+            this.cmdEliminar.Enabled = false;
             this.cmdEliminar.Location = new System.Drawing.Point(55, 80);
             this.cmdEliminar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.cmdEliminar.Name = "cmdEliminar";
@@ -184,6 +199,7 @@
             this.grpNuevoElemento.TabIndex = 11;
             this.grpNuevoElemento.TabStop = false;
             this.grpNuevoElemento.Text = "Nuevo Elemento";
+            this.grpNuevoElemento.Enter += new System.EventHandler(this.grpNuevoElemento_Enter);
             // 
             // cmdAgregar
             // 
@@ -203,6 +219,7 @@
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(148, 25);
             this.txtTramite.TabIndex = 5;
+            this.txtTramite.TextChanged += new System.EventHandler(this.txtTramite_TextChanged);
             // 
             // txtNombre
             // 
@@ -211,6 +228,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(148, 25);
             this.txtNombre.TabIndex = 4;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtCodigo
             // 
@@ -219,6 +237,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(148, 25);
             this.txtCodigo.TabIndex = 3;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // label3
             // 
@@ -263,21 +282,23 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // gbTipoOrden
+            // grpTipoDeOrden
             // 
-            this.gbTipoOrden.Controls.Add(this.btnPostOrden);
-            this.gbTipoOrden.Controls.Add(this.btnPreOrden);
-            this.gbTipoOrden.Controls.Add(this.btnInOrden);
-            this.gbTipoOrden.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbTipoOrden.Location = new System.Drawing.Point(18, 252);
-            this.gbTipoOrden.Margin = new System.Windows.Forms.Padding(2);
-            this.gbTipoOrden.Name = "gbTipoOrden";
-            this.gbTipoOrden.Padding = new System.Windows.Forms.Padding(2);
-            this.gbTipoOrden.Size = new System.Drawing.Size(369, 80);
-            this.gbTipoOrden.TabIndex = 17;
-            this.gbTipoOrden.TabStop = false;
-            this.gbTipoOrden.Text = "Tipo de Orden";
+            this.grpTipoDeOrden.Controls.Add(this.btnPostOrden);
+            this.grpTipoDeOrden.Controls.Add(this.btnPreOrden);
+            this.grpTipoDeOrden.Controls.Add(this.btnInOrden);
+            this.grpTipoDeOrden.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpTipoDeOrden.Location = new System.Drawing.Point(18, 252);
+            this.grpTipoDeOrden.Margin = new System.Windows.Forms.Padding(2);
+            this.grpTipoDeOrden.Name = "grpTipoDeOrden";
+            this.grpTipoDeOrden.Padding = new System.Windows.Forms.Padding(2);
+            this.grpTipoDeOrden.Size = new System.Drawing.Size(369, 80);
+            this.grpTipoDeOrden.TabIndex = 17;
+            this.grpTipoDeOrden.TabStop = false;
+            this.grpTipoDeOrden.Text = "Tipo de Orden";
+            this.grpTipoDeOrden.Enter += new System.EventHandler(this.grpTipoDeOrden_Enter);
             // 
             // btnPostOrden
             // 
@@ -290,6 +311,7 @@
             this.btnPostOrden.TabStop = true;
             this.btnPostOrden.Text = "PostOrden";
             this.btnPostOrden.UseVisualStyleBackColor = true;
+            this.btnPostOrden.CheckedChanged += new System.EventHandler(this.btnPostOrden_CheckedChanged);
             // 
             // btnPreOrden
             // 
@@ -302,6 +324,7 @@
             this.btnPreOrden.TabStop = true;
             this.btnPreOrden.Text = "PreOrden";
             this.btnPreOrden.UseVisualStyleBackColor = true;
+            this.btnPreOrden.CheckedChanged += new System.EventHandler(this.btnPreOrden_CheckedChanged);
             // 
             // btnInOrden
             // 
@@ -314,20 +337,22 @@
             this.btnInOrden.TabStop = true;
             this.btnInOrden.Text = "InOrden";
             this.btnInOrden.UseVisualStyleBackColor = true;
+            this.btnInOrden.CheckedChanged += new System.EventHandler(this.btnInOrden_CheckedChanged);
             // 
-            // gbAscDes
+            // GrpListarDatos
             // 
-            this.gbAscDes.Controls.Add(this.btnDescendente);
-            this.gbAscDes.Controls.Add(this.btnAscendente);
-            this.gbAscDes.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbAscDes.Location = new System.Drawing.Point(406, 252);
-            this.gbAscDes.Margin = new System.Windows.Forms.Padding(2);
-            this.gbAscDes.Name = "gbAscDes";
-            this.gbAscDes.Padding = new System.Windows.Forms.Padding(2);
-            this.gbAscDes.Size = new System.Drawing.Size(261, 80);
-            this.gbAscDes.TabIndex = 18;
-            this.gbAscDes.TabStop = false;
-            this.gbAscDes.Text = "Listar Datos";
+            this.GrpListarDatos.Controls.Add(this.btnDescendente);
+            this.GrpListarDatos.Controls.Add(this.btnAscendente);
+            this.GrpListarDatos.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GrpListarDatos.Location = new System.Drawing.Point(406, 252);
+            this.GrpListarDatos.Margin = new System.Windows.Forms.Padding(2);
+            this.GrpListarDatos.Name = "GrpListarDatos";
+            this.GrpListarDatos.Padding = new System.Windows.Forms.Padding(2);
+            this.GrpListarDatos.Size = new System.Drawing.Size(261, 80);
+            this.GrpListarDatos.TabIndex = 18;
+            this.GrpListarDatos.TabStop = false;
+            this.GrpListarDatos.Text = "Listar Datos";
+            this.GrpListarDatos.Enter += new System.EventHandler(this.GrpListarDatos_Enter);
             // 
             // btnDescendente
             // 
@@ -354,22 +379,13 @@
             this.btnAscendente.UseVisualStyleBackColor = true;
             this.btnAscendente.CheckedChanged += new System.EventHandler(this.rbAsc_CheckedChanged);
             // 
-            // TVarbolbinario
-            // 
-            this.TVarbolbinario.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TVarbolbinario.Location = new System.Drawing.Point(664, 20);
-            this.TVarbolbinario.Margin = new System.Windows.Forms.Padding(2);
-            this.TVarbolbinario.Name = "TVarbolbinario";
-            this.TVarbolbinario.Size = new System.Drawing.Size(231, 252);
-            this.TVarbolbinario.TabIndex = 19;
-            // 
             // frm_Estructuras_Ramificadas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 641);
-            this.Controls.Add(this.gbAscDes);
-            this.Controls.Add(this.gbTipoOrden);
+            this.Controls.Add(this.GrpListarDatos);
+            this.Controls.Add(this.grpTipoDeOrden);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.grpListayGrilla);
             this.Controls.Add(this.grpElementoEliminado);
@@ -378,6 +394,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "frm_Estructuras_Ramificadas";
             this.Text = "Estructuras Ramificadas - Arbol Binario";
+            this.Load += new System.EventHandler(this.frm_Estructuras_Ramificadas_Load);
             this.grpListayGrilla.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaRamificada)).EndInit();
             this.grpElementoEliminado.ResumeLayout(false);
@@ -385,10 +402,10 @@
             this.grpNuevoElemento.ResumeLayout(false);
             this.grpNuevoElemento.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.gbTipoOrden.ResumeLayout(false);
-            this.gbTipoOrden.PerformLayout();
-            this.gbAscDes.ResumeLayout(false);
-            this.gbAscDes.PerformLayout();
+            this.grpTipoDeOrden.ResumeLayout(false);
+            this.grpTipoDeOrden.PerformLayout();
+            this.GrpListarDatos.ResumeLayout(false);
+            this.GrpListarDatos.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -414,11 +431,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox gbTipoOrden;
+        private System.Windows.Forms.GroupBox grpTipoDeOrden;
         private System.Windows.Forms.RadioButton btnPostOrden;
         private System.Windows.Forms.RadioButton btnPreOrden;
         private System.Windows.Forms.RadioButton btnInOrden;
-        private System.Windows.Forms.GroupBox gbAscDes;
+        private System.Windows.Forms.GroupBox GrpListarDatos;
         private System.Windows.Forms.RadioButton btnDescendente;
         private System.Windows.Forms.RadioButton btnAscendente;
         private System.Windows.Forms.TreeView TVarbolbinario;
