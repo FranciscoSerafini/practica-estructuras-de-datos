@@ -16,6 +16,7 @@ namespace ED_Clase2
     public partial class frm_Estructuras_Ramificadas : Form
     {
         clsArbolBinario Arbol = new clsArbolBinario();
+        
         public frm_Estructuras_Ramificadas()
         {
             InitializeComponent();
@@ -28,7 +29,7 @@ namespace ED_Clase2
             objNodo.Nombre = txtNombre.Text;
             objNodo.Tramite = txtTramite.Text;
             StreamWriter Sw = new StreamWriter("./Hola.csv", false);
-
+            
             Arbol.Agregar(objNodo);
 
             if (btnInOrden.Checked)
@@ -79,7 +80,7 @@ namespace ED_Clase2
 
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
-           
+            
         }
 
         private void frm_Estructuras_Ramificadas_Load(object sender, EventArgs e)

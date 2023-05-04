@@ -12,6 +12,7 @@ namespace ED_Clase2
     
     internal class clsArbolBinario
     {
+        
         private clsNodo Inicio;
         public clsNodo Raiz
         {
@@ -135,7 +136,7 @@ namespace ED_Clase2
             treeView.Nodes.Add(R.Codigo.ToString());
             if (R.Derecha != null) InOrdenAsc(treeView, R.Derecha);
         }
-        //INORDEN ASCENDENTE
+        //INORDEN ASCENDENTE FIN
         //---------------------------------------------------------------------------------------------------------
 
 
@@ -216,7 +217,7 @@ namespace ED_Clase2
             treeView.Nodes.Add(R.Codigo.ToString());
             if (R.Izquierda != null) InOrdenAsc(treeView, R.Izquierda);
         }
-        //INORDEN DESCENDENTE
+        //INORDEN DESCENDENTE FIN
         //---------------------------------------------------------------------------------------------------------
 
         //PREORDEN
@@ -379,8 +380,63 @@ namespace ED_Clase2
         //POST
         //---------------------------------------------------------------------------------------------------------
 
+        //METODO ELIMINAR
+        private clsNodo[] vector = new clsNodo[100];
+        private Int32 indice = 0;
 
+        public void Equilibrar()
+        {
+            indice = 0;
+            CargarVectorInOrden(Raiz);
+            Raiz = null;
+            EquilibrarArbol(0, indice - 1);
+            
+        }
+        public void CargarVectorInOrden(clsNodo NodoPadre)
+        {
+            if (NodoPadre.Izquierda != null)
+            {
+                CargarVectorInOrden(NodoPadre.Izquierda);
+            }
+            vector[indice] = NodoPadre;
+            if (NodoPadre.Derecha != null)
+            {
+                CargarVectorInOrden(NodoPadre.Derecha);
+            }
+        }
+        public void EquilibrarArbol(Int32 ini, Int32 fin)
+        {
+            Int32 m = (ini + fin) / 2;
+            if (ini <= fin)
+            {
+                Agregar(vector[m]);
+                EquilibrarArbol(ini, m - 1);
+                EquilibrarArbol(m + 1, fin);
+            }
+        }
+        public void EliminarNodo(Int32 Codigo)
+        {
+            Int32 indice = 0; 
 
+            if (Raiz != null)
+            {
+                if (Raiz.Izquierda != null)
+                {
+                    EliminarNodo(Codigo);
+                }
+                if (Raiz.Codigo != Codigo)
+                {
+                    vector[indice] = Raiz.Izquierda;
+                    indice = indice + 1;
+                }
+                if (Raiz.Derecha != null)
+                {
+                    EliminarNodo(Codigo);
+                }
+            }
+            
+        }
+        
 
 
 
