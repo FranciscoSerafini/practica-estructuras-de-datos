@@ -14,6 +14,7 @@ namespace ED_Clase2
     {
         
         private clsNodo Inicio;
+       
         public clsNodo Raiz
         {
             get { return Inicio; }
@@ -414,27 +415,21 @@ namespace ED_Clase2
                 EquilibrarArbol(m + 1, fin);
             }
         }
-        public void EliminarNodo(Int32 Codigo)
+        
+       
+        public void EliminarN(clsNodo NodoPadre)
         {
-            Int32 indice = 0; 
-
-            if (Raiz != null)
+            if (NodoPadre.Izquierda != null)
             {
-                if (Raiz.Izquierda != null)
-                {
-                    EliminarNodo(Codigo);
-                }
-                if (Raiz.Codigo != Codigo)
-                {
-                    vector[indice] = Raiz.Izquierda;
-                    indice = indice + 1;
-                }
-                if (Raiz.Derecha != null)
-                {
-                    EliminarNodo(Codigo);
-                }
+                EliminarN(Raiz.Izquierda);
+                
             }
-            
+            vector[indice] = null;
+            if (NodoPadre.Derecha != null)
+            {
+                EliminarN(Raiz.Derecha);
+            }
+
         }
         
 

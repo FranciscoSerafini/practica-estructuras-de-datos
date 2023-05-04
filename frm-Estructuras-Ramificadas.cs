@@ -81,6 +81,7 @@ namespace ED_Clase2
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
             
+            
         }
 
         private void frm_Estructuras_Ramificadas_Load(object sender, EventArgs e)
