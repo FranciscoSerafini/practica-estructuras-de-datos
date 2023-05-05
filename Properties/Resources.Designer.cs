@@ -73,6 +73,16 @@ namespace ED_Clase2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Grafo {
+            get {
+                object obj = ResourceManager.GetObject("Grafo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WhatsApp_Image_2023_04_14_at_10_36_07 {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2023-04-14 at 10.36.07", resourceCulture);

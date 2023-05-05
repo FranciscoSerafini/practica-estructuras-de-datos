@@ -52,5 +52,11 @@ namespace ED_Clase2
             frm_Estructuras_Ramificadas objVentanaEstructuras = new frm_Estructuras_Ramificadas();
             objVentanaEstructuras.ShowDialog();
         }
+
+        private void grafoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGrafo objVentana = new frmGrafo();
+            objVentana.ShowDialog();
+        }
     }
 }

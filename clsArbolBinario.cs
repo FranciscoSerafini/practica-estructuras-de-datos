@@ -415,19 +415,32 @@ namespace ED_Clase2
                 EquilibrarArbol(m + 1, fin);
             }
         }
-        
-       
-        public void EliminarN(clsNodo NodoPadre)
+        public void Eliminar(int Codigo)
         {
+            clsNodo NodoPadre = Raiz;
+            EliminarN(NodoPadre, Codigo);
+            Raiz = null;
+            EquilibrarArbol(0, indice - 1);
+        }
+       
+        public void EliminarN(clsNodo NodoPadre, Int32 Codigo)
+        {
+            Int32 varCodigo = Codigo;
             if (NodoPadre.Izquierda != null)
             {
-                EliminarN(Raiz.Izquierda);
+                EliminarN(NodoPadre.Izquierda,Codigo );
+
                 
             }
-            vector[indice] = null;
+           
+            if (NodoPadre.Codigo != Codigo)
+            {
+                vector[indice] = NodoPadre;
+                indice++;
+            }
             if (NodoPadre.Derecha != null)
             {
-                EliminarN(Raiz.Derecha);
+                EliminarN(NodoPadre.Derecha, Codigo);
             }
 
         }
