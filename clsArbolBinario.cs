@@ -420,12 +420,12 @@ namespace ED_Clase2
             clsNodo NodoPadre = Raiz;
             EliminarN(NodoPadre, Codigo);
             Raiz = null;
-            EquilibrarArbol(0, indice - 1);
+            EquilibrarArbol(0, indice - 1);//equilibracion del arbol
         }
        
         public void EliminarN(clsNodo NodoPadre, Int32 Codigo)
         {
-            Int32 varCodigo = Codigo;
+           
             if (NodoPadre.Izquierda != null)
             {
                 EliminarN(NodoPadre.Izquierda,Codigo );
@@ -433,7 +433,7 @@ namespace ED_Clase2
                 
             }
            
-            if (NodoPadre.Codigo != Codigo)
+            if (NodoPadre.Codigo != Codigo) //si los codigos son diferentes, se agrega el dato al vecto
             {
                 vector[indice] = NodoPadre;
                 indice++;

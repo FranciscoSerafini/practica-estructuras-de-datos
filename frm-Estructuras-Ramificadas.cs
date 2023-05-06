@@ -25,6 +25,7 @@ namespace ED_Clase2
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
             clsNodo objNodo = new clsNodo();
+            
             objNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
             objNodo.Nombre = txtNombre.Text;
             objNodo.Tramite = txtTramite.Text;
@@ -80,7 +81,7 @@ namespace ED_Clase2
 
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
-            
+           
             
         }
 
