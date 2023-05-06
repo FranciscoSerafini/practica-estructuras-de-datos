@@ -16,6 +16,9 @@ namespace ED_Clase2
     public partial class frm_Estructuras_Ramificadas : Form
     {
         clsArbolBinario Arbol = new clsArbolBinario();
+        public bool asc;
+        public string recorrer;
+
         
         public frm_Estructuras_Ramificadas()
         {
@@ -37,8 +40,8 @@ namespace ED_Clase2
             {
                 if (btnAscendente.Checked)
                 {
-                    Arbol.Recorrer(lstLista);
-                    Arbol.Recorrer(dgvListaRamificada);
+                    Arbol.Recorrer(lstLista, asc, recorrer);
+                    Arbol.Recorrer(dgvGrilla);
                     Arbol.Recorrer(cmbEstructurasRamificadas);
                     Arbol.Recorrer(TVarbolbinario);
                     
@@ -46,14 +49,14 @@ namespace ED_Clase2
                 else
                 {
                     Arbol.RecorrerDes(lstLista);
-                    Arbol.RecorrerDes(dgvListaRamificada);
+                    Arbol.RecorrerDes(dgvGrilla);
                     Arbol.RecorrerDes(cmbEstructurasRamificadas);
                     Arbol.RecorrerDes(TVarbolbinario);
                 }
             }
             if (btnPreOrden.Checked)
             {
-                Arbol.RecorrerPreOrden(dgvListaRamificada);
+                Arbol.RecorrerPreOrden(dgvGrilla);
                 Arbol.RecorrerPreOrden(lstLista);
                 Arbol.RecorrerPreOrden(cmbEstructurasRamificadas); 
                 Arbol.RecorrerPreOrden(TVarbolbinario);
@@ -61,7 +64,7 @@ namespace ED_Clase2
             }
             if (btnPostOrden.Checked)
             {
-                Arbol.RecorrerPostOrden(dgvListaRamificada);
+                Arbol.RecorrerPostOrden(dgvGrilla);
                 Arbol.RecorrerPostOrden(lstLista);
                 Arbol.RecorrerPostOrden(cmbEstructurasRamificadas);
                 Arbol.RecorrerPostOrden(TVarbolbinario);
@@ -81,7 +84,35 @@ namespace ED_Clase2
 
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
-           
+            if ((Arbol.Raiz != null) && (cmbEstructurasRamificadas.Text != ""))
+            {
+                Arbol.Eliminar(Convert.ToInt32(cmbEstructurasRamificadas.SelectedItem));
+
+                if (Arbol.Raiz != null)
+                {
+                    
+                    Arbol.Equilibrar();
+                    EstadoInOrden();
+                    RecorrerElementos();
+                    SeleccionRecorrido();
+                   
+
+                    
+                }
+                else
+                {
+                    dgvGrilla.Rows.Clear();
+                    cmbEstructurasRamificadas.Items.Clear();
+                    lstLista.Items.Clear();
+                    TVarbolbinario.Nodes.Clear();
+                    txtCodigo.Focus();
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se encuentran datos");
+            }
             
         }
 
@@ -199,6 +230,60 @@ namespace ED_Clase2
         private void TVarbolbinario_AfterSelect(object sender, TreeViewEventArgs e)
         {
 
+      
+        }
+        public void RecorrerElementos()
+        {
+            if (Arbol.Raiz != null)
+            {
+                StreamWriter sw = new StreamWriter("./hola.txt", false);
+                Arbol.Recorrer(sw, asc, recorrer);
+                sw.Close();
+                sw.Dispose();
+                Arbol.Recorrer(lstLista, asc, recorrer);
+                Arbol.Recorrer(cmbEstructurasRamificadas,asc,recorrer);
+                Arbol.Recorrer(dgvGrilla, recorrer, asc);
+                    
+            }
+        }
+    
+        public void EstadoInOrden()
+        {
+            if (btnInOrden.Checked)
+            {
+                btnAscendente.Enabled = true;
+                btnDescendente.Enabled = true;
+            }
+            else
+            {
+                btnAscendente.Enabled = false;
+                btnDescendente.Enabled = false;
+            }
+        }
+        public void SeleccionRecorrido()
+        {
+            if (btnInOrden.Checked)
+            {
+                recorrer = "InOrden";
+                if (btnAscendente.Checked)
+                {
+                    asc = true;
+                }
+                else if (btnDescendente.Checked)
+                {
+                    asc = false;
+                }
+            }
+            else if (btnPostOrden.Checked)
+            {
+                recorrer = "PostOrden";
+            }
+            else if (btnPreOrden.Checked)
+            {
+                recorrer = "PreOrden";
+            }
         }
     }
+
+
 }

@@ -99,3 +99,4 @@ C:\Users\Alumno\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED_Clase2.f
 C:\Users\franc\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED_Clase2.frm_Estructuras_Ramificadas.resources
 C:\Users\Alumnos\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED_Clase2.frm_Estructuras_Ramificadas.resources
 C:\Users\Alumno\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED_Clase2.frm_Estructuras_Ramificadas.resources
+C:\Users\franc\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED_Clase2.frmGrafo.resources

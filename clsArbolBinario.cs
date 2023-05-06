@@ -62,11 +62,7 @@ namespace ED_Clase2
         //---------------------------------------------------------------------------------------------------------
 
         //LISTA
-        public void Recorrer(ListBox Lista)
-        {
-            Lista.Items.Clear();
-            InOrdenAsc(Lista, Raiz);
-        }
+       
 
         public void InOrdenAsc(ListBox lst, clsNodo R)
         {
@@ -415,39 +411,167 @@ namespace ED_Clase2
                 EquilibrarArbol(m + 1, fin);
             }
         }
-        public void Eliminar(int Codigo)
+        public void Eliminar(Int32 Codigo)
         {
-            clsNodo NodoPadre = Raiz;
-            EliminarN(NodoPadre, Codigo);
-            Raiz = null;
-            EquilibrarArbol(0, indice - 1);//equilibracion del arbol
+            Raiz = EliminarNodos(Raiz, Codigo);
         }
-       
-        public void EliminarN(clsNodo NodoPadre, Int32 Codigo)
+        private clsNodo EliminarNodos(clsNodo NodoActual, Int32 Codigo)
         {
-           
-            if (NodoPadre.Izquierda != null)
+            if (NodoActual == null)
             {
-                EliminarN(NodoPadre.Izquierda,Codigo );
+                return null;
+            }
+            if (Codigo < NodoActual.Codigo)
+            {
+                NodoActual.Izquierda = EliminarNodos(NodoActual.Izquierda, Codigo);
+            }
+            else if (Codigo > NodoActual.Codigo)
+            {
+                NodoActual.Derecha= EliminarNodos(NodoActual.Derecha, Codigo);
+            }
+            else
+            {
+                if (NodoActual.Izquierda == null)
+                {
+                    return NodoActual.Derecha;
+                }
+                else if(NodoActual.Derecha == null)
+                {
+                    return NodoActual.Izquierda;
+                }
 
-                
+                clsNodo sucesor = NodoActual.Derecha;
+                while (sucesor.Izquierda != null)
+                {
+                    sucesor = sucesor.Izquierda;
+                }
+                NodoActual.Codigo = sucesor.Codigo;
+                NodoActual.Derecha = EliminarNodos(NodoActual.Derecha, sucesor.Codigo);
             }
-           
-            if (NodoPadre.Codigo != Codigo) //si los codigos son diferentes, se agrega el dato al vecto
-            {
-                vector[indice] = NodoPadre;
-                indice++;
-            }
-            if (NodoPadre.Derecha != null)
-            {
-                EliminarN(NodoPadre.Derecha, Codigo);
-            }
-
+            return NodoActual;
         }
-        
+
+        //busqueda recursiva
+
+        public clsNodo Buscar(int CodigoBusqueda)
+        {
+            return BusquedaRecursiva(Raiz, CodigoBusqueda);
+        }
+        public clsNodo BusquedaRecursiva(clsNodo actual, int CodigoBusqueda)
+        {
+            if (actual == null) //si null el nodo no esta en el arbol
+            {
+                return null;
+            }
+            else if (actual.Codigo == CodigoBusqueda)
+            {
+                return actual;
+            }
+            else if (CodigoBusqueda < actual.Codigo )
+            {
+                return BusquedaRecursiva(actual.Izquierda, CodigoBusqueda);
+            }
+            else
+            {
+                return BusquedaRecursiva(actual.Derecha, CodigoBusqueda);
+            }
+        }
+
+        //recorridos
+
+        public void Recorrer(ComboBox combo, bool ascedente, string recorrer)
+        {
+            combo.Items.Clear();
+            if (recorrer == "InOrden")
+            {
+                if (ascedente == true)
+                {
+                    InOrdenAsc(combo, Raiz);
+                }
+                else if (ascedente == false)
+                {
+                    InOrdenDes(combo, Raiz);
+                }
+            }
+            else if (recorrer == "PostOrden")
+            {
+                PostOrden(combo, Raiz);
+            }
+            else if (recorrer == "PreOrden")
+            {
+                PreOrden(combo, Raiz);
+            }
+        }
+        public void Recorrer(ListBox lst, bool ascedente, string recorrer)
+        {
+            lst.Items.Clear();
+            if (recorrer == "InOrden")
+            {
+                if (ascedente == true)
+                {
+                    InOrdenAsc(lst, Raiz);
+                }
+                else if (ascedente == false)
+                {
+                    InOrdenDes(lst, Raiz);
+                }
+            }
+            else if (recorrer == "PostOrden")
+            {
+                PostOrden(lst, Raiz);
+            }
+            else if (recorrer == "PreOrden")
+            {
+                PreOrden(lst, Raiz);
+            }
+        }
+        public void Recorrer(StreamWriter sw, bool ascedente, string recorrer)
+        {
+            if (recorrer == "InOrden")
+            {
+                if (ascedente == true)
+                {
+                    InOrdenAsc(sw, Raiz);
+                }
+                else if (ascedente == false)
+                {
+                    InOrdenDes(sw, Raiz);
+                }
+            }
+            else if (recorrer == "PostOrden")
+            {
+                PostOrden(sw, Raiz);
+            }
+            else if (recorrer == "PreOrden")
+            {
+                PreOrden(sw, Raiz);
+            }
+        }
+        public void Recorrer(DataGridView Grilla, string recorrer, bool ascedente)
+        {
+            Grilla.Rows.Clear();
+            if (recorrer == "InOrden")
+            {
+                if (ascedente == true)
+                {
+                    InOrdenAsc(Grilla, Raiz);
+                }
+                else if (ascedente == false)
+                {
+                    InOrdenDes(Grilla, Raiz);
+                }
+            }
+            else if (recorrer == "PostOrden")
+            {
+                PostOrden(Grilla, Raiz);
+            }
+            else if (recorrer == "PreOrden")
+            {
+                PreOrden(Grilla, Raiz);
+            }
+        }
 
 
 
-        
     }
 }
