@@ -69,22 +69,23 @@
             this.grpListayGrilla.Controls.Add(this.TVarbolbinario);
             this.grpListayGrilla.Controls.Add(this.dgvGrilla);
             this.grpListayGrilla.Controls.Add(this.lstLista);
-            this.grpListayGrilla.Location = new System.Drawing.Point(7, 323);
+            this.grpListayGrilla.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpListayGrilla.Location = new System.Drawing.Point(13, 258);
             this.grpListayGrilla.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpListayGrilla.Name = "grpListayGrilla";
             this.grpListayGrilla.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grpListayGrilla.Size = new System.Drawing.Size(902, 266);
+            this.grpListayGrilla.Size = new System.Drawing.Size(814, 266);
             this.grpListayGrilla.TabIndex = 12;
             this.grpListayGrilla.TabStop = false;
             this.grpListayGrilla.Text = "Listado en una grilla y lista";
             // 
             // TVarbolbinario
             // 
-            this.TVarbolbinario.Font = new System.Drawing.Font("Rockwell", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TVarbolbinario.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TVarbolbinario.Location = new System.Drawing.Point(664, 19);
             this.TVarbolbinario.Margin = new System.Windows.Forms.Padding(2);
             this.TVarbolbinario.Name = "TVarbolbinario";
-            this.TVarbolbinario.Size = new System.Drawing.Size(231, 239);
+            this.TVarbolbinario.Size = new System.Drawing.Size(150, 239);
             this.TVarbolbinario.TabIndex = 19;
             // 
             // dgvGrilla
@@ -120,12 +121,13 @@
             // 
             // lstLista
             // 
+            this.lstLista.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstLista.FormattingEnabled = true;
-            this.lstLista.ItemHeight = 19;
+            this.lstLista.ItemHeight = 17;
             this.lstLista.Location = new System.Drawing.Point(11, 30);
             this.lstLista.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lstLista.Name = "lstLista";
-            this.lstLista.Size = new System.Drawing.Size(288, 232);
+            this.lstLista.Size = new System.Drawing.Size(288, 225);
             this.lstLista.TabIndex = 0;
             this.lstLista.SelectedIndexChanged += new System.EventHandler(this.lstLista_SelectedIndexChanged);
             // 
@@ -134,12 +136,12 @@
             this.grpElementoEliminado.Controls.Add(this.cmbEstructurasRamificadas);
             this.grpElementoEliminado.Controls.Add(this.cmdEliminar);
             this.grpElementoEliminado.Controls.Add(this.label6);
-            this.grpElementoEliminado.Font = new System.Drawing.Font("Rockwell", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpElementoEliminado.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpElementoEliminado.Location = new System.Drawing.Point(559, 14);
             this.grpElementoEliminado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpElementoEliminado.Name = "grpElementoEliminado";
             this.grpElementoEliminado.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grpElementoEliminado.Size = new System.Drawing.Size(313, 112);
+            this.grpElementoEliminado.Size = new System.Drawing.Size(268, 112);
             this.grpElementoEliminado.TabIndex = 13;
             this.grpElementoEliminado.TabStop = false;
             this.grpElementoEliminado.Text = "Elemento Eliminado";
@@ -147,18 +149,20 @@
             // cmbEstructurasRamificadas
             // 
             this.cmbEstructurasRamificadas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstructurasRamificadas.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEstructurasRamificadas.FormattingEnabled = true;
-            this.cmbEstructurasRamificadas.Location = new System.Drawing.Point(94, 31);
+            this.cmbEstructurasRamificadas.Location = new System.Drawing.Point(64, 31);
             this.cmbEstructurasRamificadas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbEstructurasRamificadas.Name = "cmbEstructurasRamificadas";
-            this.cmbEstructurasRamificadas.Size = new System.Drawing.Size(195, 27);
+            this.cmbEstructurasRamificadas.Size = new System.Drawing.Size(195, 24);
             this.cmbEstructurasRamificadas.TabIndex = 8;
             this.cmbEstructurasRamificadas.SelectedIndexChanged += new System.EventHandler(this.cmbEstructurasRamificadas_SelectedIndexChanged);
             // 
             // cmdEliminar
             // 
             this.cmdEliminar.Enabled = false;
-            this.cmdEliminar.Location = new System.Drawing.Point(182, 69);
+            this.cmdEliminar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdEliminar.Location = new System.Drawing.Point(153, 75);
             this.cmdEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(106, 27);
@@ -170,11 +174,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Rockwell", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(9, 31);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 18);
+            this.label6.Size = new System.Drawing.Size(47, 16);
             this.label6.TabIndex = 3;
             this.label6.Text = "Codigo";
             // 
@@ -187,7 +191,7 @@
             this.grpNuevoElemento.Controls.Add(this.label3);
             this.grpNuevoElemento.Controls.Add(this.label2);
             this.grpNuevoElemento.Controls.Add(this.label1);
-            this.grpNuevoElemento.Font = new System.Drawing.Font("Rockwell", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpNuevoElemento.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpNuevoElemento.Location = new System.Drawing.Point(250, 5);
             this.grpNuevoElemento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpNuevoElemento.Name = "grpNuevoElemento";
@@ -210,61 +214,64 @@
             // 
             // txtTramite
             // 
+            this.txtTramite.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTramite.Location = new System.Drawing.Point(95, 113);
             this.txtTramite.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTramite.Name = "txtTramite";
-            this.txtTramite.Size = new System.Drawing.Size(148, 25);
+            this.txtTramite.Size = new System.Drawing.Size(148, 22);
             this.txtTramite.TabIndex = 5;
             this.txtTramite.TextChanged += new System.EventHandler(this.txtTramite_TextChanged);
             // 
             // txtNombre
             // 
+            this.txtNombre.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(95, 71);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(148, 25);
+            this.txtNombre.Size = new System.Drawing.Size(148, 22);
             this.txtNombre.TabIndex = 4;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtCodigo
             // 
+            this.txtCodigo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigo.Location = new System.Drawing.Point(95, 27);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(148, 25);
+            this.txtCodigo.Size = new System.Drawing.Size(148, 22);
             this.txtCodigo.TabIndex = 3;
             this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Rockwell", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(11, 122);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 19);
+            this.label3.Size = new System.Drawing.Size(50, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Tramite";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Rockwell", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(11, 76);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 19);
+            this.label2.Size = new System.Drawing.Size(53, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Rockwell", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(11, 30);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 19);
+            this.label1.Size = new System.Drawing.Size(47, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo";
             // 
@@ -284,12 +291,12 @@
             this.grpTipoDeOrden.Controls.Add(this.btnPostOrden);
             this.grpTipoDeOrden.Controls.Add(this.btnPreOrden);
             this.grpTipoDeOrden.Controls.Add(this.btnInOrden);
-            this.grpTipoDeOrden.Font = new System.Drawing.Font("Rockwell", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpTipoDeOrden.Location = new System.Drawing.Point(11, 200);
+            this.grpTipoDeOrden.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpTipoDeOrden.Location = new System.Drawing.Point(7, 198);
             this.grpTipoDeOrden.Margin = new System.Windows.Forms.Padding(2);
             this.grpTipoDeOrden.Name = "grpTipoDeOrden";
             this.grpTipoDeOrden.Padding = new System.Windows.Forms.Padding(2);
-            this.grpTipoDeOrden.Size = new System.Drawing.Size(355, 56);
+            this.grpTipoDeOrden.Size = new System.Drawing.Size(541, 53);
             this.grpTipoDeOrden.TabIndex = 17;
             this.grpTipoDeOrden.TabStop = false;
             this.grpTipoDeOrden.Text = "Tipo de Orden";
@@ -297,10 +304,10 @@
             // btnPostOrden
             // 
             this.btnPostOrden.AutoSize = true;
-            this.btnPostOrden.Location = new System.Drawing.Point(245, 33);
+            this.btnPostOrden.Location = new System.Drawing.Point(446, 19);
             this.btnPostOrden.Margin = new System.Windows.Forms.Padding(2);
             this.btnPostOrden.Name = "btnPostOrden";
-            this.btnPostOrden.Size = new System.Drawing.Size(102, 23);
+            this.btnPostOrden.Size = new System.Drawing.Size(87, 20);
             this.btnPostOrden.TabIndex = 1;
             this.btnPostOrden.Text = "PostOrden";
             this.btnPostOrden.UseVisualStyleBackColor = true;
@@ -309,10 +316,10 @@
             // btnPreOrden
             // 
             this.btnPreOrden.AutoSize = true;
-            this.btnPreOrden.Location = new System.Drawing.Point(128, 33);
+            this.btnPreOrden.Location = new System.Drawing.Point(216, 19);
             this.btnPreOrden.Margin = new System.Windows.Forms.Padding(2);
             this.btnPreOrden.Name = "btnPreOrden";
-            this.btnPreOrden.Size = new System.Drawing.Size(95, 23);
+            this.btnPreOrden.Size = new System.Drawing.Size(80, 20);
             this.btnPreOrden.TabIndex = 1;
             this.btnPreOrden.Text = "PreOrden";
             this.btnPreOrden.UseVisualStyleBackColor = true;
@@ -321,10 +328,10 @@
             // btnInOrden
             // 
             this.btnInOrden.AutoSize = true;
-            this.btnInOrden.Location = new System.Drawing.Point(18, 33);
+            this.btnInOrden.Location = new System.Drawing.Point(7, 19);
             this.btnInOrden.Margin = new System.Windows.Forms.Padding(2);
             this.btnInOrden.Name = "btnInOrden";
-            this.btnInOrden.Size = new System.Drawing.Size(86, 23);
+            this.btnInOrden.Size = new System.Drawing.Size(70, 20);
             this.btnInOrden.TabIndex = 0;
             this.btnInOrden.Text = "InOrden";
             this.btnInOrden.UseVisualStyleBackColor = true;
@@ -334,12 +341,12 @@
             // 
             this.GrpListarDatos.Controls.Add(this.btnDescendente);
             this.GrpListarDatos.Controls.Add(this.btnAscendente);
-            this.GrpListarDatos.Font = new System.Drawing.Font("Rockwell", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GrpListarDatos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GrpListarDatos.Location = new System.Drawing.Point(559, 133);
             this.GrpListarDatos.Margin = new System.Windows.Forms.Padding(2);
             this.GrpListarDatos.Name = "GrpListarDatos";
             this.GrpListarDatos.Padding = new System.Windows.Forms.Padding(2);
-            this.GrpListarDatos.Size = new System.Drawing.Size(313, 76);
+            this.GrpListarDatos.Size = new System.Drawing.Size(268, 118);
             this.GrpListarDatos.TabIndex = 18;
             this.GrpListarDatos.TabStop = false;
             this.GrpListarDatos.Text = "Listar Datos";
@@ -347,10 +354,11 @@
             // btnDescendente
             // 
             this.btnDescendente.AutoSize = true;
-            this.btnDescendente.Location = new System.Drawing.Point(160, 36);
+            this.btnDescendente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDescendente.Location = new System.Drawing.Point(12, 84);
             this.btnDescendente.Margin = new System.Windows.Forms.Padding(2);
             this.btnDescendente.Name = "btnDescendente";
-            this.btnDescendente.Size = new System.Drawing.Size(117, 23);
+            this.btnDescendente.Size = new System.Drawing.Size(101, 20);
             this.btnDescendente.TabIndex = 2;
             this.btnDescendente.TabStop = true;
             this.btnDescendente.Text = "Descendente";
@@ -359,10 +367,11 @@
             // btnAscendente
             // 
             this.btnAscendente.AutoSize = true;
-            this.btnAscendente.Location = new System.Drawing.Point(18, 37);
+            this.btnAscendente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAscendente.Location = new System.Drawing.Point(12, 24);
             this.btnAscendente.Margin = new System.Windows.Forms.Padding(2);
             this.btnAscendente.Name = "btnAscendente";
-            this.btnAscendente.Size = new System.Drawing.Size(108, 23);
+            this.btnAscendente.Size = new System.Drawing.Size(94, 20);
             this.btnAscendente.TabIndex = 1;
             this.btnAscendente.TabStop = true;
             this.btnAscendente.Text = "Ascendente";
@@ -373,7 +382,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(943, 762);
+            this.ClientSize = new System.Drawing.Size(842, 536);
             this.Controls.Add(this.GrpListarDatos);
             this.Controls.Add(this.grpTipoDeOrden);
             this.Controls.Add(this.pictureBox1);

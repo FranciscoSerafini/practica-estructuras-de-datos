@@ -62,7 +62,7 @@
             // 
             this.grpListayGrilla.Controls.Add(this.dgvListaDoble);
             this.grpListayGrilla.Controls.Add(this.lstListasDoble);
-            this.grpListayGrilla.Location = new System.Drawing.Point(11, 235);
+            this.grpListayGrilla.Location = new System.Drawing.Point(12, 158);
             this.grpListayGrilla.Name = "grpListayGrilla";
             this.grpListayGrilla.Size = new System.Drawing.Size(601, 182);
             this.grpListayGrilla.TabIndex = 12;
@@ -117,7 +117,7 @@
             this.grpElementoEliminado.Controls.Add(this.label6);
             this.grpElementoEliminado.Location = new System.Drawing.Point(413, 12);
             this.grpElementoEliminado.Name = "grpElementoEliminado";
-            this.grpElementoEliminado.Size = new System.Drawing.Size(200, 140);
+            this.grpElementoEliminado.Size = new System.Drawing.Size(200, 79);
             this.grpElementoEliminado.TabIndex = 13;
             this.grpElementoEliminado.TabStop = false;
             this.grpElementoEliminado.Text = "Elemento Eliminado";
@@ -238,9 +238,9 @@
             // 
             this.grpListaDAtos.Controls.Add(this.rtnDescendente);
             this.grpListaDAtos.Controls.Add(this.rbtnAscendete);
-            this.grpListaDAtos.Location = new System.Drawing.Point(413, 158);
+            this.grpListaDAtos.Location = new System.Drawing.Point(413, 96);
             this.grpListaDAtos.Name = "grpListaDAtos";
-            this.grpListaDAtos.Size = new System.Drawing.Size(200, 71);
+            this.grpListaDAtos.Size = new System.Drawing.Size(200, 56);
             this.grpListaDAtos.TabIndex = 15;
             this.grpListaDAtos.TabStop = false;
             this.grpListaDAtos.Text = "Listar Datos";
@@ -248,7 +248,7 @@
             // rtnDescendente
             // 
             this.rtnDescendente.AutoSize = true;
-            this.rtnDescendente.Location = new System.Drawing.Point(6, 42);
+            this.rtnDescendente.Location = new System.Drawing.Point(94, 19);
             this.rtnDescendente.Name = "rtnDescendente";
             this.rtnDescendente.Size = new System.Drawing.Size(89, 17);
             this.rtnDescendente.TabIndex = 3;
@@ -273,7 +273,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 427);
+            this.ClientSize = new System.Drawing.Size(624, 348);
             this.Controls.Add(this.grpListaDAtos);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.grpListayGrilla);

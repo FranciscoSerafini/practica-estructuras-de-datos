@@ -111,7 +111,7 @@ namespace ED_Clase2
             this.grpElementoEliminado.Controls.Add(this.label6);
             this.grpElementoEliminado.Location = new System.Drawing.Point(413, 12);
             this.grpElementoEliminado.Name = "grpElementoEliminado";
-            this.grpElementoEliminado.Size = new System.Drawing.Size(200, 140);
+            this.grpElementoEliminado.Size = new System.Drawing.Size(200, 82);
             this.grpElementoEliminado.TabIndex = 9;
             this.grpElementoEliminado.TabStop = false;
             this.grpElementoEliminado.Text = "Elemento Eliminado";
@@ -120,14 +120,14 @@ namespace ED_Clase2
             // 
             this.cmbListaSimple.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbListaSimple.FormattingEnabled = true;
-            this.cmbListaSimple.Location = new System.Drawing.Point(47, 84);
+            this.cmbListaSimple.Location = new System.Drawing.Point(52, 17);
             this.cmbListaSimple.Name = "cmbListaSimple";
             this.cmbListaSimple.Size = new System.Drawing.Size(131, 21);
             this.cmbListaSimple.TabIndex = 8;
             // 
             // cmdEliminar
             // 
-            this.cmdEliminar.Location = new System.Drawing.Point(9, 111);
+            this.cmdEliminar.Location = new System.Drawing.Point(26, 49);
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(157, 23);
             this.cmdEliminar.TabIndex = 7;
@@ -138,7 +138,7 @@ namespace ED_Clase2
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(0, 84);
+            this.label6.Location = new System.Drawing.Point(6, 19);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 3;
@@ -232,7 +232,7 @@ namespace ED_Clase2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 406);
+            this.ClientSize = new System.Drawing.Size(619, 343);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.grpListayGrilla);
             this.Controls.Add(this.grpElementoEliminado);
