@@ -82,11 +82,10 @@
             // 
             this.TVarbolbinario.Font = new System.Drawing.Font("Rockwell", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TVarbolbinario.Location = new System.Drawing.Point(664, 19);
-            this.TVarbolbinario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TVarbolbinario.Margin = new System.Windows.Forms.Padding(2);
             this.TVarbolbinario.Name = "TVarbolbinario";
             this.TVarbolbinario.Size = new System.Drawing.Size(231, 239);
             this.TVarbolbinario.TabIndex = 19;
-            this.TVarbolbinario.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TVarbolbinario_AfterSelect);
             // 
             // dgvGrilla
             // 
@@ -100,7 +99,6 @@
             this.dgvGrilla.Name = "dgvGrilla";
             this.dgvGrilla.Size = new System.Drawing.Size(351, 240);
             this.dgvGrilla.TabIndex = 1;
-            this.dgvGrilla.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaRamificada_CellContentClick);
             // 
             // Column1
             // 
@@ -145,7 +143,6 @@
             this.grpElementoEliminado.TabIndex = 13;
             this.grpElementoEliminado.TabStop = false;
             this.grpElementoEliminado.Text = "Elemento Eliminado";
-            this.grpElementoEliminado.Enter += new System.EventHandler(this.grpElementoEliminado_Enter);
             // 
             // cmbEstructurasRamificadas
             // 
@@ -199,7 +196,6 @@
             this.grpNuevoElemento.TabIndex = 11;
             this.grpNuevoElemento.TabStop = false;
             this.grpNuevoElemento.Text = "Nuevo Elemento";
-            this.grpNuevoElemento.Enter += new System.EventHandler(this.grpNuevoElemento_Enter);
             // 
             // cmdAgregar
             // 
@@ -282,7 +278,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // grpTipoDeOrden
             // 
@@ -291,24 +286,22 @@
             this.grpTipoDeOrden.Controls.Add(this.btnInOrden);
             this.grpTipoDeOrden.Font = new System.Drawing.Font("Rockwell", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpTipoDeOrden.Location = new System.Drawing.Point(11, 200);
-            this.grpTipoDeOrden.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpTipoDeOrden.Margin = new System.Windows.Forms.Padding(2);
             this.grpTipoDeOrden.Name = "grpTipoDeOrden";
-            this.grpTipoDeOrden.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpTipoDeOrden.Padding = new System.Windows.Forms.Padding(2);
             this.grpTipoDeOrden.Size = new System.Drawing.Size(355, 56);
             this.grpTipoDeOrden.TabIndex = 17;
             this.grpTipoDeOrden.TabStop = false;
             this.grpTipoDeOrden.Text = "Tipo de Orden";
-            this.grpTipoDeOrden.Enter += new System.EventHandler(this.grpTipoDeOrden_Enter);
             // 
             // btnPostOrden
             // 
             this.btnPostOrden.AutoSize = true;
             this.btnPostOrden.Location = new System.Drawing.Point(245, 33);
-            this.btnPostOrden.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPostOrden.Margin = new System.Windows.Forms.Padding(2);
             this.btnPostOrden.Name = "btnPostOrden";
             this.btnPostOrden.Size = new System.Drawing.Size(102, 23);
             this.btnPostOrden.TabIndex = 1;
-            this.btnPostOrden.TabStop = true;
             this.btnPostOrden.Text = "PostOrden";
             this.btnPostOrden.UseVisualStyleBackColor = true;
             this.btnPostOrden.CheckedChanged += new System.EventHandler(this.btnPostOrden_CheckedChanged);
@@ -317,11 +310,10 @@
             // 
             this.btnPreOrden.AutoSize = true;
             this.btnPreOrden.Location = new System.Drawing.Point(128, 33);
-            this.btnPreOrden.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPreOrden.Margin = new System.Windows.Forms.Padding(2);
             this.btnPreOrden.Name = "btnPreOrden";
             this.btnPreOrden.Size = new System.Drawing.Size(95, 23);
             this.btnPreOrden.TabIndex = 1;
-            this.btnPreOrden.TabStop = true;
             this.btnPreOrden.Text = "PreOrden";
             this.btnPreOrden.UseVisualStyleBackColor = true;
             this.btnPreOrden.CheckedChanged += new System.EventHandler(this.btnPreOrden_CheckedChanged);
@@ -330,11 +322,10 @@
             // 
             this.btnInOrden.AutoSize = true;
             this.btnInOrden.Location = new System.Drawing.Point(18, 33);
-            this.btnInOrden.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInOrden.Margin = new System.Windows.Forms.Padding(2);
             this.btnInOrden.Name = "btnInOrden";
             this.btnInOrden.Size = new System.Drawing.Size(86, 23);
             this.btnInOrden.TabIndex = 0;
-            this.btnInOrden.TabStop = true;
             this.btnInOrden.Text = "InOrden";
             this.btnInOrden.UseVisualStyleBackColor = true;
             this.btnInOrden.CheckedChanged += new System.EventHandler(this.btnInOrden_CheckedChanged);
@@ -345,20 +336,19 @@
             this.GrpListarDatos.Controls.Add(this.btnAscendente);
             this.GrpListarDatos.Font = new System.Drawing.Font("Rockwell", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GrpListarDatos.Location = new System.Drawing.Point(559, 133);
-            this.GrpListarDatos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GrpListarDatos.Margin = new System.Windows.Forms.Padding(2);
             this.GrpListarDatos.Name = "GrpListarDatos";
-            this.GrpListarDatos.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GrpListarDatos.Padding = new System.Windows.Forms.Padding(2);
             this.GrpListarDatos.Size = new System.Drawing.Size(313, 76);
             this.GrpListarDatos.TabIndex = 18;
             this.GrpListarDatos.TabStop = false;
             this.GrpListarDatos.Text = "Listar Datos";
-            this.GrpListarDatos.Enter += new System.EventHandler(this.GrpListarDatos_Enter);
             // 
             // btnDescendente
             // 
             this.btnDescendente.AutoSize = true;
             this.btnDescendente.Location = new System.Drawing.Point(160, 36);
-            this.btnDescendente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDescendente.Margin = new System.Windows.Forms.Padding(2);
             this.btnDescendente.Name = "btnDescendente";
             this.btnDescendente.Size = new System.Drawing.Size(117, 23);
             this.btnDescendente.TabIndex = 2;
@@ -370,7 +360,7 @@
             // 
             this.btnAscendente.AutoSize = true;
             this.btnAscendente.Location = new System.Drawing.Point(18, 37);
-            this.btnAscendente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAscendente.Margin = new System.Windows.Forms.Padding(2);
             this.btnAscendente.Name = "btnAscendente";
             this.btnAscendente.Size = new System.Drawing.Size(108, 23);
             this.btnAscendente.TabIndex = 1;

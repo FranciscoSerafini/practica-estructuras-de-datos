@@ -62,22 +62,29 @@ namespace ED_Clase2
         //---------------------------------------------------------------------------------------------------------
 
         //LISTA
-       
 
+        public void Recorrer(ListBox lst)
+        {
+            lst.Items.Clear();
+            InOrdenAsc(lst, Raiz);
+        }
         public void InOrdenAsc(ListBox lst, clsNodo R)
         {
             if (R.Izquierda != null) InOrdenAsc(lst, R.Izquierda);
             lst.Items.Add(R.Codigo + " " + R.Nombre + " " + R.Tramite);
             if (R.Derecha != null) InOrdenAsc(lst, R.Derecha);
         }
+        
 
 
-        // GRILLA
-        public void Recorrer(DataGridView Grilla)
-        {
+
+
+          // GRILLA
+         public void Recorrer(DataGridView Grilla)
+         {
             Grilla.Rows.Clear();
             InOrdenAsc(Grilla, Raiz);
-        }
+         }
 
         public void InOrdenAsc(DataGridView Grilla, clsNodo R)
         {

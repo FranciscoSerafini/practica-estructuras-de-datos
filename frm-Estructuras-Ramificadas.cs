@@ -16,7 +16,7 @@ namespace ED_Clase2
     public partial class frm_Estructuras_Ramificadas : Form
     {
         clsArbolBinario Arbol = new clsArbolBinario();
-        public bool asc;
+        public bool asc = true;
         public string recorrer;
 
         
@@ -42,7 +42,7 @@ namespace ED_Clase2
                 {
                    
                     Arbol.Recorrer(dgvGrilla);
-                    Arbol.Recorrer(lstLista, asc, recorrer);
+                    Arbol.Recorrer(lstLista);
                     Arbol.Recorrer(cmbEstructurasRamificadas);
                     Arbol.Recorrer(TVarbolbinario);
                     Arbol.RecorrerSW(Sw);
@@ -54,7 +54,7 @@ namespace ED_Clase2
                 }
                 if (btnAscendente.Checked)
                 {
-                    Arbol.Recorrer(lstLista, asc, recorrer);
+                    Arbol.Recorrer(lstLista);
                     Arbol.Recorrer(dgvGrilla);
                     Arbol.Recorrer(cmbEstructurasRamificadas);
                     Arbol.Recorrer(TVarbolbinario);
@@ -150,9 +150,8 @@ namespace ED_Clase2
         {
             if (btnPreOrden.Checked == true)
             {
-                btnAscendente.Checked = false;
-                btnDescendente.Checked = false;
-                GrpListarDatos.Enabled = false;
+               
+                GrpListarDatos.Enabled = true;
                 
             }
         }
@@ -161,9 +160,8 @@ namespace ED_Clase2
         {
             if (btnPostOrden.Checked == true)
             {
-                btnAscendente.Checked = false;
-                btnDescendente.Checked = false;
-                GrpListarDatos.Enabled = false;
+                
+                GrpListarDatos.Enabled = true;
             }
         }
 
@@ -214,46 +212,14 @@ namespace ED_Clase2
             }
         }
 
-        private void grpElementoEliminado_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void grpNuevoElemento_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GrpListarDatos_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void grpTipoDeOrden_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void lstLista_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void dgvListaRamificada_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+       
 
-        }
-
-        private void TVarbolbinario_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-
-      
-        }
+        
         public void RecorrerElementos()
         {
             if (Arbol.Raiz != null)
