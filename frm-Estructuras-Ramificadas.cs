@@ -27,6 +27,7 @@ namespace ED_Clase2
 
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
+            
             clsNodo objNodo = new clsNodo();
             
             objNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
@@ -84,35 +85,28 @@ namespace ED_Clase2
 
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
-            if ((Arbol.Raiz != null) && (cmbEstructurasRamificadas.Text != ""))
+            if ((Arbol.Raiz != null) && (cmbEstructurasRamificadas.SelectedIndex != -1))
             {
                 Arbol.Eliminar(Convert.ToInt32(cmbEstructurasRamificadas.SelectedItem));
+                SeleccionRecorrido();
+                RecorrerElementos();
+                
 
-                if (Arbol.Raiz != null)
-                {
-                    
-                    Arbol.Equilibrar();
-                    EstadoInOrden();
-                    RecorrerElementos();
-                    SeleccionRecorrido();
-                   
-
-                    
-                }
-                else
+                if (Arbol.Raiz == null)
                 {
                     dgvGrilla.Rows.Clear();
                     cmbEstructurasRamificadas.Items.Clear();
                     lstLista.Items.Clear();
                     TVarbolbinario.Nodes.Clear();
-                    txtCodigo.Focus();
-
+                    File.Delete("./Hola.csv");
                 }
+               
             }
             else
             {
                 MessageBox.Show("No se encuentran datos");
             }
+            txtCodigo.Focus();
             
         }
 
@@ -243,6 +237,9 @@ namespace ED_Clase2
                 Arbol.Recorrer(lstLista, asc, recorrer);
                 Arbol.Recorrer(cmbEstructurasRamificadas,asc,recorrer);
                 Arbol.Recorrer(dgvGrilla, recorrer, asc);
+                Arbol.Recorrer(TVarbolbinario);
+                TVarbolbinario.ExpandAll();
+                
                     
             }
         }

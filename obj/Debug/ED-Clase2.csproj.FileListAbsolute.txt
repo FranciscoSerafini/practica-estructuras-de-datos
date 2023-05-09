@@ -66,7 +66,6 @@ C:\Users\franc\Source\Repos\practica-estructuras-de-datos\bin\Debug\ED-Clase2.ex
 C:\Users\franc\Source\Repos\practica-estructuras-de-datos\bin\Debug\ED-Clase2.pdb
 C:\Users\franc\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED-Clase2.csproj.AssemblyReference.cache
 C:\Users\franc\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED-Clase2.csproj.SuggestedBindingRedirects.cache
-C:\Users\franc\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED_Clase2.Form1.resources
 C:\Users\franc\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED_Clase2.frmDatos.resources
 C:\Users\franc\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED_Clase2.frm_lista_simple.resources
 C:\Users\franc\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED_Clase2.frmPila.resources
@@ -100,3 +99,4 @@ C:\Users\franc\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED_Clase2.fr
 C:\Users\Alumnos\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED_Clase2.frm_Estructuras_Ramificadas.resources
 C:\Users\Alumno\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED_Clase2.frm_Estructuras_Ramificadas.resources
 C:\Users\franc\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED_Clase2.frmGrafo.resources
+C:\Users\franc\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED_Clase2.frmInicio.resources

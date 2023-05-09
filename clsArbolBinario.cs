@@ -124,14 +124,15 @@ namespace ED_Clase2
         public void Recorrer(TreeView treeView)
         {
             treeView.Nodes.Clear();
-            InOrdenAsc(treeView, Raiz);
+            InOrdenAsc(treeView.Nodes, Raiz);
         }
 
-        public void InOrdenAsc(TreeView treeView, clsNodo R)
+        public void InOrdenAsc(TreeNodeCollection nodoPadre, clsNodo Raiz)
         {
-            if (R.Izquierda != null) InOrdenAsc(treeView, R.Izquierda);
-            treeView.Nodes.Add(R.Codigo.ToString());
-            if (R.Derecha != null) InOrdenAsc(treeView, R.Derecha);
+            TreeNode nodonuevo = nodoPadre.Add(Raiz.Codigo.ToString());
+            if (Raiz.Izquierda != null) InOrdenAsc(nodonuevo.Nodes, Raiz.Izquierda);
+            
+            if (Raiz.Derecha != null) InOrdenAsc(nodonuevo.Nodes, Raiz.Derecha);
         }
         //INORDEN ASCENDENTE FIN
         //---------------------------------------------------------------------------------------------------------
@@ -205,14 +206,14 @@ namespace ED_Clase2
         public void RecorrerDes(TreeView treeView)
         {
             treeView.Nodes.Clear();
-            InOrdenDes(treeView, Raiz);
+            InOrdenDes(treeView.Nodes, Raiz);
         }
 
-        public void InOrdenDes(TreeView treeView, clsNodo R)
+        public void InOrdenDes(TreeNodeCollection NodoPadre, clsNodo R)
         {
-            if (R.Derecha != null) InOrdenAsc(treeView, R.Derecha);
-            treeView.Nodes.Add(R.Codigo.ToString());
-            if (R.Izquierda != null) InOrdenAsc(treeView, R.Izquierda);
+            if (R.Derecha != null) InOrdenAsc(NodoPadre, R.Derecha);
+            TreeNode nodoNuevo = NodoPadre.Add(R.Codigo.ToString());
+            if (R.Izquierda != null) InOrdenAsc(NodoPadre, R.Izquierda);
         }
         //INORDEN DESCENDENTE FIN
         //---------------------------------------------------------------------------------------------------------
@@ -285,14 +286,14 @@ namespace ED_Clase2
         public void RecorrerPreOrden(TreeView treeView)
         {
             treeView.Nodes.Clear();
-            PreOrden(treeView, Raiz);
+            PreOrden(treeView.Nodes, Raiz);
         }
 
-        public void PreOrden(TreeView treeView, clsNodo R)
+        public void PreOrden(TreeNodeCollection Npadre, clsNodo R)
         {
-            treeView.Nodes.Add(R.Codigo.ToString());
-            if (R.Izquierda != null) InOrdenAsc(treeView, R.Izquierda);
-            if (R.Derecha != null) InOrdenAsc(treeView, R.Derecha);
+            TreeNode nodoNuevo = Npadre.Add(R.Codigo.ToString());
+            if (R.Izquierda != null) InOrdenAsc(nodoNuevo.Nodes, R.Izquierda);
+            if (R.Derecha != null) InOrdenAsc(nodoNuevo.Nodes, R.Derecha);
         }
         //PREORDEN
         //---------------------------------------------------------------------------------------------------------
@@ -365,14 +366,15 @@ namespace ED_Clase2
         public void RecorrerPostOrden(TreeView treeView)
         {
             treeView.Nodes.Clear();
-            PostOrden(treeView, Raiz);
+            PostOrden(treeView.Nodes, Raiz);
         }
 
-        public void PostOrden(TreeView treeView, clsNodo R)
+        public void PostOrden(TreeNodeCollection Npadre, clsNodo R)
         {
-            if (R.Izquierda != null) InOrdenAsc(treeView, R.Izquierda);
-            if (R.Derecha != null) InOrdenAsc(treeView, R.Derecha);
-            treeView.Nodes.Add(R.Codigo.ToString());
+            TreeNode nodoNuevo = Npadre.Add(R.Codigo.ToString());
+            if (R.Izquierda != null) InOrdenAsc(nodoNuevo.Nodes, R.Izquierda);
+            if (R.Derecha != null) InOrdenAsc(nodoNuevo.Nodes, R.Derecha);
+            
         }
         //POST
         //---------------------------------------------------------------------------------------------------------
@@ -380,9 +382,18 @@ namespace ED_Clase2
         //METODO ELIMINAR
         private clsNodo[] vector = new clsNodo[100];
         private Int32 indice = 0;
+        private int EliminoNodos;
 
         public void Equilibrar()
         {
+            indice = 0;
+            CargarVectorInOrden(Raiz);
+            Raiz = null;
+            EquilibrarArbol(0, indice - 1);
+        }
+        public void Equilibrar(int Nodo)
+        {
+            EliminoNodos = Nodo;
             indice = 0;
             CargarVectorInOrden(Raiz);
             Raiz = null;
@@ -570,6 +581,7 @@ namespace ED_Clase2
                 PreOrden(Grilla, Raiz);
             }
         }
+       
 
 
 
