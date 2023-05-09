@@ -27,25 +27,41 @@ namespace ED_Clase2
 
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
-            
-            clsNodo objNodo = new clsNodo();
-            
-            objNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
-            objNodo.Nombre = txtNombre.Text;
-            objNodo.Tramite = txtTramite.Text;
-            StreamWriter Sw = new StreamWriter("./Hola.csv", false);
-            
-            Arbol.Agregar(objNodo);
-
-            if (btnInOrden.Checked)
+            if (Arbol.Busqueda(Convert.ToInt32(txtCodigo.Text)) == false)
             {
+                clsNodo objNodo = new clsNodo();
+
+                objNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
+                objNodo.Nombre = txtNombre.Text;
+                objNodo.Tramite = txtTramite.Text;
+                StreamWriter Sw = new StreamWriter("./Hola.csv", true);
+
+                Arbol.Agregar(objNodo);
+
+                if (btnInOrden.Checked)
+                {
+                   
+                    Arbol.Recorrer(dgvGrilla);
+                    Arbol.Recorrer(lstLista, asc, recorrer);
+                    Arbol.Recorrer(cmbEstructurasRamificadas);
+                    Arbol.Recorrer(TVarbolbinario);
+                    Arbol.RecorrerSW(Sw);
+                   
+                    
+                    
+
+                    
+                }
                 if (btnAscendente.Checked)
                 {
                     Arbol.Recorrer(lstLista, asc, recorrer);
                     Arbol.Recorrer(dgvGrilla);
                     Arbol.Recorrer(cmbEstructurasRamificadas);
                     Arbol.Recorrer(TVarbolbinario);
-                    
+                    Arbol.RecorrerDesSW(Sw);
+                   
+
+
                 }
                 else
                 {
@@ -53,29 +69,40 @@ namespace ED_Clase2
                     Arbol.RecorrerDes(dgvGrilla);
                     Arbol.RecorrerDes(cmbEstructurasRamificadas);
                     Arbol.RecorrerDes(TVarbolbinario);
+                    Arbol.RecorrerDesSW(Sw);
+                   
                 }
-            }
-            if (btnPreOrden.Checked)
-            {
-                Arbol.RecorrerPreOrden(dgvGrilla);
-                Arbol.RecorrerPreOrden(lstLista);
-                Arbol.RecorrerPreOrden(cmbEstructurasRamificadas); 
-                Arbol.RecorrerPreOrden(TVarbolbinario);
+                if (btnPreOrden.Checked)
+                {
+                    Arbol.RecorrerPreOrden(dgvGrilla);
+                    Arbol.RecorrerPreOrden(lstLista);
+                    Arbol.RecorrerPreOrden(cmbEstructurasRamificadas);
+                    Arbol.RecorrerPreOrden(TVarbolbinario);
+                    Arbol.RecorrerPreOrdenSW(Sw);
+                    
 
+                }
+                if (btnPostOrden.Checked)
+                {
+                    Arbol.RecorrerPostOrden(dgvGrilla);
+                    Arbol.RecorrerPostOrden(lstLista);
+                    Arbol.RecorrerPostOrden(cmbEstructurasRamificadas);
+                    Arbol.RecorrerPostOrden(TVarbolbinario);
+                    Arbol.RecorrerPreOrdenSW(Sw);
+                   
+                }
+
+                txtCodigo.Text = "";
+                txtNombre.Text = "";
+                txtTramite.Text = "";
+                Sw.Close();
+                Sw.Dispose();
             }
-            if (btnPostOrden.Checked)
+            else
             {
-                Arbol.RecorrerPostOrden(dgvGrilla);
-                Arbol.RecorrerPostOrden(lstLista);
-                Arbol.RecorrerPostOrden(cmbEstructurasRamificadas);
-                Arbol.RecorrerPostOrden(TVarbolbinario);
+                MessageBox.Show("TU CODIGO SE REPITE, POR FAVOR INTENTA CON OTRO");
             }
-           
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtTramite.Text = "";
-            Sw.Close();
-            Sw.Dispose();
+            
         }
 
         private void rbAsc_CheckedChanged(object sender, EventArgs e)
@@ -94,11 +121,12 @@ namespace ED_Clase2
 
                 if (Arbol.Raiz == null)
                 {
+                    File.Delete("./Hola.csv");
                     dgvGrilla.Rows.Clear();
                     cmbEstructurasRamificadas.Items.Clear();
                     lstLista.Items.Clear();
                     TVarbolbinario.Nodes.Clear();
-                    File.Delete("./Hola.csv");
+                    
                 }
                
             }
@@ -230,7 +258,7 @@ namespace ED_Clase2
         {
             if (Arbol.Raiz != null)
             {
-                StreamWriter sw = new StreamWriter("./hola.txt", false);
+                StreamWriter sw = new StreamWriter("./REPORTE.txt", false);
                 Arbol.Recorrer(sw, asc, recorrer);
                 sw.Close();
                 sw.Dispose();

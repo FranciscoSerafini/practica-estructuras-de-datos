@@ -464,28 +464,29 @@ namespace ED_Clase2
 
         //busqueda recursiva
 
-        public clsNodo Buscar(int CodigoBusqueda)
+        public bool Busqueda(Int32 Codigo)
         {
-            return BusquedaRecursiva(Raiz, CodigoBusqueda);
-        }
-        public clsNodo BusquedaRecursiva(clsNodo actual, int CodigoBusqueda)
-        {
-            if (actual == null) //si null el nodo no esta en el arbol
+            clsNodo auxiliar = Raiz;
+            while (auxiliar != null && auxiliar.Codigo != Codigo)
             {
-                return null;
+                if (Codigo < auxiliar.Codigo)
+                {
+                    auxiliar = auxiliar.Izquierda;
+                }
+                else
+                {
+                    auxiliar = auxiliar.Derecha;
+                }
             }
-            else if (actual.Codigo == CodigoBusqueda)
+            if (auxiliar != null)
             {
-                return actual;
-            }
-            else if (CodigoBusqueda < actual.Codigo )
-            {
-                return BusquedaRecursiva(actual.Izquierda, CodigoBusqueda);
+                return true;
             }
             else
             {
-                return BusquedaRecursiva(actual.Derecha, CodigoBusqueda);
+                return false;
             }
+            
         }
 
         //recorridos

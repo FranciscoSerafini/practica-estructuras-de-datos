@@ -38,7 +38,20 @@ namespace ED_Clase2
 
         private void cmdEliminarDoble_Click(object sender, EventArgs e)
         {
-            
+            Int32 combo = Convert.ToInt32(lstListasDoble.SelectedItem);
+            if (Lista.Primero != null)
+            {
+
+                Lista.Eliminar(combo);
+                Lista.Recorrer(dgvListaDoble);
+                Lista.Recorrer(cmbListaSimpleDoble);
+                Lista.Recorrer(lstListasDoble);
+            }
+            else
+            {
+                MessageBox.Show("La Lista está vacia");
+                cmdEliminarDoble.Enabled = false;
+            }
         }
 
         private void rbtnAscendete_CheckedChanged(object sender, EventArgs e)
