@@ -382,7 +382,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(842, 536);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(857, 536);
             this.Controls.Add(this.GrpListarDatos);
             this.Controls.Add(this.grpTipoDeOrden);
             this.Controls.Add(this.pictureBox1);
@@ -390,8 +391,10 @@
             this.Controls.Add(this.grpElementoEliminado);
             this.Controls.Add(this.grpNuevoElemento);
             this.Font = new System.Drawing.Font("Rockwell", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frm_Estructuras_Ramificadas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructuras Ramificadas - Arbol Binario";
             this.Load += new System.EventHandler(this.frm_Estructuras_Ramificadas_Load);
             this.grpListayGrilla.ResumeLayout(false);

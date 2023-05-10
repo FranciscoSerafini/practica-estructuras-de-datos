@@ -130,6 +130,7 @@
             this.cmbListaSimpleDoble.Name = "cmbListaSimpleDoble";
             this.cmbListaSimpleDoble.Size = new System.Drawing.Size(131, 21);
             this.cmbListaSimpleDoble.TabIndex = 8;
+            this.cmbListaSimpleDoble.SelectedIndexChanged += new System.EventHandler(this.cmbListaSimpleDoble_SelectedIndexChanged);
             // 
             // cmdEliminarDoble
             // 
@@ -182,6 +183,7 @@
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(100, 20);
             this.txtTramite.TabIndex = 5;
+            this.txtTramite.TextChanged += new System.EventHandler(this.txtTramite_TextChanged);
             // 
             // txtNombre
             // 
@@ -189,13 +191,17 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 4;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(86, 19);
+            this.txtCodigo.Location = new System.Drawing.Point(64, 19);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(78, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 3;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // label3
             // 

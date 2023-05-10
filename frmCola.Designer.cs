@@ -32,9 +32,9 @@ namespace ED_Clase2
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCola));
             this.grpNuevoElemento = new System.Windows.Forms.GroupBox();
             this.cmdAgregar = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtElemento = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,9 +64,9 @@ namespace ED_Clase2
             // grpNuevoElemento
             // 
             this.grpNuevoElemento.Controls.Add(this.cmdAgregar);
-            this.grpNuevoElemento.Controls.Add(this.textBox3);
-            this.grpNuevoElemento.Controls.Add(this.textBox2);
-            this.grpNuevoElemento.Controls.Add(this.textBox1);
+            this.grpNuevoElemento.Controls.Add(this.txtElemento);
+            this.grpNuevoElemento.Controls.Add(this.txtNombre);
+            this.grpNuevoElemento.Controls.Add(this.txtCodigo);
             this.grpNuevoElemento.Controls.Add(this.label3);
             this.grpNuevoElemento.Controls.Add(this.label2);
             this.grpNuevoElemento.Controls.Add(this.label1);
@@ -79,6 +79,7 @@ namespace ED_Clase2
             // 
             // cmdAgregar
             // 
+            this.cmdAgregar.Enabled = false;
             this.cmdAgregar.Location = new System.Drawing.Point(10, 111);
             this.cmdAgregar.Name = "cmdAgregar";
             this.cmdAgregar.Size = new System.Drawing.Size(157, 23);
@@ -87,26 +88,31 @@ namespace ED_Clase2
             this.cmdAgregar.UseVisualStyleBackColor = true;
             this.cmdAgregar.Click += new System.EventHandler(this.cmdAgregar_Click);
             // 
-            // textBox3
+            // txtElemento
             // 
-            this.textBox3.Location = new System.Drawing.Point(64, 77);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
+            this.txtElemento.Location = new System.Drawing.Point(64, 77);
+            this.txtElemento.Name = "txtElemento";
+            this.txtElemento.Size = new System.Drawing.Size(100, 20);
+            this.txtElemento.TabIndex = 5;
+            this.txtElemento.TextChanged += new System.EventHandler(this.txtElemento_TextChanged);
             // 
-            // textBox2
+            // txtNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(64, 49);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
+            this.txtNombre.Location = new System.Drawing.Point(64, 49);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.TabIndex = 4;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
-            // textBox1
+            // txtCodigo
             // 
-            this.textBox1.Location = new System.Drawing.Point(64, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtCodigo.Location = new System.Drawing.Point(64, 19);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigo.TabIndex = 3;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // label3
             // 
@@ -271,12 +277,12 @@ namespace ED_Clase2
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // frmEstructuraDinamicaLineales
+            // frmCola
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(617, 411);
+            this.ClientSize = new System.Drawing.Size(617, 373);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.grpListayGrilla);
             this.Controls.Add(this.grpElementoEliminado);
@@ -284,9 +290,10 @@ namespace ED_Clase2
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmEstructuraDinamicaLineales";
+            this.Name = "frmCola";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructura dinamicas lineales";
+            this.Load += new System.EventHandler(this.frmCola_Load);
             this.grpNuevoElemento.ResumeLayout(false);
             this.grpNuevoElemento.PerformLayout();
             this.grpElementoEliminado.ResumeLayout(false);
@@ -306,9 +313,9 @@ namespace ED_Clase2
         private System.Windows.Forms.GroupBox grpListayGrilla;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button cmdAgregar;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtElemento;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

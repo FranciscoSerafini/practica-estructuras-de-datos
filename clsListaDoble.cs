@@ -172,8 +172,11 @@ namespace ED_Clase2
                             Ant = Aux;
                             Aux = Aux.Siguiente;
                         }
-                        Ant.Siguiente = Aux.Siguiente;
+
                         Aux = Aux.Siguiente;
+
+                        Ant.Siguiente = Aux.Siguiente;
+                        
                         Aux.Anterior = Ant;
                     }
                 }

@@ -20,7 +20,8 @@ namespace ED_Clase2
 
         private void frm_lista_simple_Load(object sender, EventArgs e)
         {
-
+            cmdAgregar.Enabled = false;
+            txtCodigo.Focus();
         }
 
         private void cmdAgregar_Click(object sender, EventArgs e)
@@ -42,18 +43,83 @@ namespace ED_Clase2
 
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
-            
-            if (Lista.Primero != null)
+            if  (cmbListaSimple.SelectedIndex != -1)
             {
-                Int32 codigo = Convert.ToInt32(cmbListaSimple.Text);
-                Lista.Eliminar(codigo);
-                Lista.Recorrer(dgvLista);
-                Lista.Recorrer(lstListasimple);
-                Lista.Recorrer(cmbListaSimple);
+                if (Lista.Primero != null)
+                {
+                    Int32 codigo = Convert.ToInt32(cmbListaSimple.Text);
+                    Lista.Eliminar(codigo);
+                    Lista.Recorrer(dgvLista);
+                    Lista.Recorrer(lstListasimple);
+                    Lista.Recorrer(cmbListaSimple);
 
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("NO HAY CODIGOS PARA ELIMINAR");
+            }
+           
+            
+        }
+
+        public void BotonAgregar()
+        {
+            if (txtCodigo.Text != "" && txtNombre.Text != "" && txtTramite.Text != "")
+            {
+                cmdAgregar.Enabled = true;
+            }
+            else
+            {
+                cmdAgregar.Enabled = false;
 
             }
-            
+        }
+        public void limpiar()
+        {
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtTramite.Text = "";
+        }
+        private void letras(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+            }
+        }
+        private void numeros(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            numeros(sender, e);
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            letras(sender, e);
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            BotonAgregar();
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            BotonAgregar();
+        }
+
+        private void txtTramite_TextChanged(object sender, EventArgs e)
+        {
+            BotonAgregar();
         }
     }
 }

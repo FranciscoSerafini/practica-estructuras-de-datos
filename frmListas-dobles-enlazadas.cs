@@ -31,27 +31,25 @@ namespace ED_Clase2
             Lista.Recorrer(lstListasDoble);
             Lista.Recorrer(cmbListaSimpleDoble);
 
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtTramite.Text = "";
+            limpiar();
+            txtCodigo.Focus();
         }
 
         private void cmdEliminarDoble_Click(object sender, EventArgs e)
         {
-            Int32 combo = Convert.ToInt32(lstListasDoble.SelectedItem);
             if (Lista.Primero != null)
             {
-
+                Int32 combo = Convert.ToInt32(lstListasDoble.SelectedItem);
                 Lista.Eliminar(combo);
                 Lista.Recorrer(dgvListaDoble);
                 Lista.Recorrer(cmbListaSimpleDoble);
                 Lista.Recorrer(lstListasDoble);
-            }
-            else
-            {
-                MessageBox.Show("La Lista está vacia");
                 cmdEliminarDoble.Enabled = false;
             }
+                
+            
+            
+
         }
 
         private void rbtnAscendete_CheckedChanged(object sender, EventArgs e)
@@ -66,7 +64,8 @@ namespace ED_Clase2
 
         private void frmListasDobles_Load(object sender, EventArgs e)
         {
-            
+            txtCodigo.Focus();
+            cmdEliminarDoble.Enabled = false;
         }
 
         private void rtnDescendente_CheckedChanged(object sender, EventArgs e)
@@ -74,6 +73,72 @@ namespace ED_Clase2
             Lista.RecorrerDes(dgvListaDoble);
             Lista.RecorrerDes(lstListasDoble);
             Lista.RecorrerDes(cmbListaSimpleDoble);
+        }
+
+        public void BotonAgregar()
+        {
+            if (txtCodigo.Text != "" && txtNombre.Text != "" && txtTramite.Text != "")
+            {
+                cmdAgregarDobles.Enabled = true;
+            }
+            else
+            {
+                cmdAgregarDobles.Enabled = false;
+
+            }
+        }
+        public void limpiar()
+        {
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtTramite.Text = "";
+        }
+        private void letras(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+            }
+        }
+        private void numeros(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            BotonAgregar();
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            BotonAgregar();
+        }
+
+        private void txtTramite_TextChanged(object sender, EventArgs e)
+        {
+            BotonAgregar();
+        }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            numeros(sender, e);
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            letras(sender, e);
+        }
+
+        private void cmbListaSimpleDoble_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbListaSimpleDoble.SelectedIndex != -1)
+            {
+                cmdEliminarDoble.Enabled = true;
+            }
         }
     }
 }

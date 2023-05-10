@@ -55,8 +55,7 @@ namespace ED_Clase2
 
         private void grafoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmGrafo objVentana = new frmGrafo();
-            objVentana.ShowDialog();
+            
         }
 
         private void frmInicio_Load(object sender, EventArgs e)

@@ -82,12 +82,6 @@
       <DependentUpon>frmCola.cs</DependentUpon>
     </Compile>
     <Compile Include="clsNodo.cs" />
-    <Compile Include="frmGrafo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmGrafo.Designer.cs">
-      <DependentUpon>frmGrafo.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmPila.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,9 +110,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCola.resx">
       <DependentUpon>frmCola.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmGrafo.resx">
-      <DependentUpon>frmGrafo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPila.resx">
       <DependentUpon>frmPila.cs</DependentUpon>
@@ -160,6 +151,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Grafo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b7d9b325fb0acc7bf44e3eb922768f69.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
