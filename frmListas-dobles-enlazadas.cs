@@ -37,9 +37,10 @@ namespace ED_Clase2
 
         private void cmdEliminarDoble_Click(object sender, EventArgs e)
         {
-            if (Lista.Primero != null)
+            Int32 combo = Convert.ToInt32(lstListasDoble.SelectedItem);
+            if(Lista.Primero != null)
             {
-                Int32 combo = Convert.ToInt32(lstListasDoble.SelectedItem);
+                
                 Lista.Eliminar(combo);
                 Lista.Recorrer(dgvListaDoble);
                 Lista.Recorrer(cmbListaSimpleDoble);

@@ -35,7 +35,7 @@ namespace ED_Clase2
             }
             else
             {
-                if (Nuevo.Codigo < Primero.Codigo)
+                if (Nuevo.Codigo <= Primero.Codigo)
                 {
                     Nuevo.Siguiente = Primero;
                     Primero.Anterior = Nuevo;
@@ -43,7 +43,7 @@ namespace ED_Clase2
                 }
                 else
                 {
-                    if (Nuevo.Codigo > Ultimo.Codigo)
+                    if (Nuevo.Codigo >= Ultimo.Codigo)
                     {
                         Ultimo.Siguiente = Nuevo;
                         Nuevo.Anterior = Ultimo;
@@ -53,7 +53,7 @@ namespace ED_Clase2
                     {
                         clsNodo Aux = Primero;
                         clsNodo Ant = Primero;
-                        while (Aux.Codigo < Nuevo.Codigo)
+                        while (Aux.Codigo <= Nuevo.Codigo)
                         {
                             Ant = Aux;
                             Aux = Aux.Siguiente;
@@ -172,12 +172,10 @@ namespace ED_Clase2
                             Ant = Aux;
                             Aux = Aux.Siguiente;
                         }
-
-                        Aux = Aux.Siguiente;
-
                         Ant.Siguiente = Aux.Siguiente;
-                        
+                        Aux = Aux.Siguiente;
                         Aux.Anterior = Ant;
+
                     }
                 }
             }

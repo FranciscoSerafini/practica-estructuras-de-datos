@@ -279,6 +279,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(624, 348);
             this.Controls.Add(this.grpListaDAtos);
             this.Controls.Add(this.pictureBox1);
@@ -286,6 +287,7 @@
             this.Controls.Add(this.grpElementoEliminado);
             this.Controls.Add(this.grpNuevoElemento);
             this.Name = "frmListasDobles";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listas dobles enlazadas";
             this.Load += new System.EventHandler(this.frmListasDobles_Load);
             this.grpListayGrilla.ResumeLayout(false);
