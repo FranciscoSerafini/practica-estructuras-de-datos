@@ -231,6 +231,7 @@
             this.txtNombre.Size = new System.Drawing.Size(148, 22);
             this.txtNombre.TabIndex = 4;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtCodigo
             // 
@@ -241,6 +242,7 @@
             this.txtCodigo.Size = new System.Drawing.Size(148, 22);
             this.txtCodigo.TabIndex = 3;
             this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // label3
             // 

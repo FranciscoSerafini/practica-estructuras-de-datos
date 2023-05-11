@@ -167,13 +167,13 @@ namespace ED_Clase2
                         //borramos el INTERMEDIO
                         clsNodo Aux = Primero;
                         clsNodo Ant = Primero;
-                        while (Aux.Codigo < Codigo)//busqueda secuencial
+                        while (Aux.Codigo != Codigo)//busqueda secuencial
                         {
                             Ant = Aux;
                             Aux = Aux.Siguiente;
                         }
-                        Ant.Siguiente = Aux.Siguiente;
                         Aux = Aux.Siguiente;
+                        Ant.Siguiente = Aux;
                         Aux.Anterior = Ant;
 
                     }

@@ -46,6 +46,8 @@ namespace ED_Clase2
                     Arbol.Recorrer(cmbEstructurasRamificadas);
                     Arbol.Recorrer(TVarbolbinario);
                     Arbol.RecorrerSW(Sw);
+                    txtCodigo.Focus();
+                    
                    
                     
                     
@@ -59,7 +61,8 @@ namespace ED_Clase2
                     Arbol.Recorrer(cmbEstructurasRamificadas);
                     Arbol.Recorrer(TVarbolbinario);
                     Arbol.RecorrerDesSW(Sw);
-                   
+                    txtCodigo.Focus();
+
 
 
                 }
@@ -70,7 +73,8 @@ namespace ED_Clase2
                     Arbol.RecorrerDes(cmbEstructurasRamificadas);
                     Arbol.RecorrerDes(TVarbolbinario);
                     Arbol.RecorrerDesSW(Sw);
-                   
+                    txtCodigo.Focus();
+
                 }
                 if (btnPreOrden.Checked)
                 {
@@ -79,7 +83,8 @@ namespace ED_Clase2
                     Arbol.RecorrerPreOrden(cmbEstructurasRamificadas);
                     Arbol.RecorrerPreOrden(TVarbolbinario);
                     Arbol.RecorrerPreOrdenSW(Sw);
-                    
+                    txtCodigo.Focus();
+
 
                 }
                 if (btnPostOrden.Checked)
@@ -89,7 +94,8 @@ namespace ED_Clase2
                     Arbol.RecorrerPostOrden(cmbEstructurasRamificadas);
                     Arbol.RecorrerPostOrden(TVarbolbinario);
                     Arbol.RecorrerPreOrdenSW(Sw);
-                   
+                    txtCodigo.Focus();
+
                 }
 
                 txtCodigo.Text = "";
@@ -273,6 +279,32 @@ namespace ED_Clase2
             {
                 recorrer = "PreOrden";
             }
+       
+        }
+
+        private void letras(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+            }
+        }
+        private void numeros(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            numeros(sender, e);
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            letras(sender, e);
         }
     }
 
