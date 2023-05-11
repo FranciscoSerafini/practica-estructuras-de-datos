@@ -40,7 +40,7 @@ namespace ED_Clase2
             
             if(Lista.Primero != null)
             {
-                Int32 codigo = Convert.ToInt32(lstListasDoble.Text);
+                Int32 codigo = Convert.ToInt32(cmbListaSimpleDoble.Text);
                 Lista.Eliminar(codigo);
                 Lista.Recorrer(dgvListaDoble);
                 Lista.Recorrer(cmbListaSimpleDoble);
