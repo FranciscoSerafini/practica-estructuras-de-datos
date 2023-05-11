@@ -22,12 +22,12 @@ namespace ED_Clase2
             else
             {
                 Ultimo.Siguiente = Nuevo;
-                Ultimo = Nuevo;
+                Ultimo = Nuevo; //se actualiza  para que apunte al nuevo nodo, convirtiéndolo en el último nodo de la lista.
             }
         }
         public void Eliminar()
         {
-            if (Primero == Ultimo)
+            if (Primero == Ultimo) //primero es igual a ultimo?
             {
                 Primero = null;
                 Ultimo = null;
