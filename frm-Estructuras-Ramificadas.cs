@@ -34,24 +34,19 @@ namespace ED_Clase2
                 objNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
                 objNodo.Nombre = txtNombre.Text;
                 objNodo.Tramite = txtTramite.Text;
-                StreamWriter Sw = new StreamWriter("./Hola.csv", true);
+                StreamWriter Sw = new StreamWriter("./Reporte.csv", true);
 
                 Arbol.Agregar(objNodo);
+                
 
                 if (btnInOrden.Checked)
                 {
-                   
                     Arbol.Recorrer(dgvGrilla);
                     Arbol.Recorrer(lstLista);
                     Arbol.Recorrer(cmbEstructurasRamificadas);
                     Arbol.Recorrer(TVarbolbinario);
                     Arbol.RecorrerSW(Sw);
                     txtCodigo.Focus();
-                    
-                   
-                    
-                    
-
                     
                 }
                 if (btnAscendente.Checked)
@@ -62,9 +57,6 @@ namespace ED_Clase2
                     Arbol.Recorrer(TVarbolbinario);
                     Arbol.RecorrerDesSW(Sw);
                     txtCodigo.Focus();
-
-
-
                 }
                 else
                 {
@@ -74,7 +66,6 @@ namespace ED_Clase2
                     Arbol.RecorrerDes(TVarbolbinario);
                     Arbol.RecorrerDesSW(Sw);
                     txtCodigo.Focus();
-
                 }
                 if (btnPreOrden.Checked)
                 {
@@ -85,7 +76,6 @@ namespace ED_Clase2
                     Arbol.RecorrerPreOrdenSW(Sw);
                     txtCodigo.Focus();
 
-
                 }
                 if (btnPostOrden.Checked)
                 {
@@ -95,7 +85,6 @@ namespace ED_Clase2
                     Arbol.RecorrerPostOrden(TVarbolbinario);
                     Arbol.RecorrerPreOrdenSW(Sw);
                     txtCodigo.Focus();
-
                 }
 
                 txtCodigo.Text = "";
@@ -103,6 +92,7 @@ namespace ED_Clase2
                 txtTramite.Text = "";
                 Sw.Close();
                 Sw.Dispose();
+                
             }
             else
             {
@@ -305,6 +295,20 @@ namespace ED_Clase2
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             letras(sender, e);
+        }
+
+        
+
+        private void cmdEquilibrar_Click_1(object sender, EventArgs e)
+        {
+            if (Arbol.Raiz != null)
+            {
+                Arbol.Equilibrar();
+                Arbol.Recorrer(dgvGrilla);
+                Arbol.Recorrer(lstLista);
+                Arbol.Recorrer(cmbEstructurasRamificadas);
+                Arbol.Recorrer(TVarbolbinario);
+            }
         }
     }
 

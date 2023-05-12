@@ -74,9 +74,6 @@ namespace ED_Clase2
             lst.Items.Add(R.Codigo + " " + R.Nombre + " " + R.Tramite);
             if (R.Derecha != null) InOrdenAsc(lst, R.Derecha);
         }
-        
-
-
 
 
           // GRILLA
@@ -389,36 +386,34 @@ namespace ED_Clase2
         //METODO ELIMINAR
         private clsNodo[] vector = new clsNodo[100];
         private Int32 indice = 0;
-        private int EliminoNodos;
 
         public void Equilibrar()
         {
             indice = 0;
             CargarVectorInOrden(Raiz);
+
             Raiz = null;
+
             EquilibrarArbol(0, indice - 1);
+
         }
-        public void Equilibrar(int Nodo)
-        {
-            EliminoNodos = Nodo;
-            indice = 0;
-            CargarVectorInOrden(Raiz);
-            Raiz = null;
-            EquilibrarArbol(0, indice - 1);
-            
-        }
-        public void CargarVectorInOrden(clsNodo NodoPadre)
+        private void CargarVectorInOrden(clsNodo NodoPadre)
         {
             if (NodoPadre.Izquierda != null)
             {
                 CargarVectorInOrden(NodoPadre.Izquierda);
             }
             vector[indice] = NodoPadre;
+            indice++;
             if (NodoPadre.Derecha != null)
             {
                 CargarVectorInOrden(NodoPadre.Derecha);
             }
+
         }
+
+
+      
         public void EquilibrarArbol(Int32 ini, Int32 fin)
         {
             Int32 m = (ini + fin) / 2;
