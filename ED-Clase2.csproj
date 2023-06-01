@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsArbolBinario.cs" />
+    <Compile Include="clsBaseDatos.cs" />
     <Compile Include="clsCola.cs" />
     <Compile Include="clsLista-Simple.cs" />
     <Compile Include="clsListaDoble.cs" />

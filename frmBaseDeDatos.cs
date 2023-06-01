@@ -10,11 +10,50 @@ using System.Windows.Forms;
 
 namespace ED_Clase2
 {
+    
     public partial class frmBaseDeDatos : Form
     {
+        clsBaseDatos objBaseDatos;
         public frmBaseDeDatos()
         {
             InitializeComponent();
+        }
+
+        private void cmdProyeccionSimple_Click(object sender, EventArgs e)
+        {
+            objBaseDatos = new clsBaseDatos();
+            String varSQL = "Select Titulo FROM Libro ";
+            objBaseDatos.Listar(dgv,varSQL);
+        }
+
+        private void cmdProyeccionMulti_Click(object sender, EventArgs e)
+        {
+            objBaseDatos = new clsBaseDatos();
+            String varSQL = "Select Titulo, Año, IdIdioma FROM Libro";
+            objBaseDatos.Listar(dgv, varSQL);
+        }
+
+        private void cmdSeleccionSimple_Click(object sender, EventArgs e)
+        {
+            objBaseDatos = new clsBaseDatos();
+            String varSQL = "SELECT TITULO FROM Libro WHERE IdIdioma = 2";
+            objBaseDatos.Listar(dgv, varSQL);
+        }
+
+        private void cmdSeleccionMulti_Click(object sender, EventArgs e)
+        {
+            objBaseDatos = new clsBaseDatos();
+            String varSQL = "SELECT * FROM Libro WHERE IdLibro = 2 AND IdAutor > 1";
+            objBaseDatos.Listar(dgv, varSQL);
+        }
+
+        private void cmdUnion_Click(object sender, EventArgs e)
+        {
+            objBaseDatos = new clsBaseDatos();
+            String varSQL = " SELECT * FROM Libro WHERE IdIdioma = 2 " + 
+                " union " +
+                " SELECT * FROM Libro where IdIdioma = 3 ";
+            objBaseDatos.Listar(dgv, varSQL);
         }
     }
 }

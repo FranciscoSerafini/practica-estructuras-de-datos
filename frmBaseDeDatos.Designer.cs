@@ -29,7 +29,7 @@ namespace ED_Clase2
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmdProyeccionSimple = new System.Windows.Forms.Button();
             this.cmdProyeccionMulti = new System.Windows.Forms.Button();
@@ -42,19 +42,19 @@ namespace ED_Clase2
             this.cmdSeleccionConvolucion = new System.Windows.Forms.Button();
             this.cmdSeleccionMulti = new System.Windows.Forms.Button();
             this.cmdSeleccionSimple = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgv
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 28);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 297);
-            this.dataGridView1.TabIndex = 0;
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Location = new System.Drawing.Point(12, 28);
+            this.dgv.Name = "dgv";
+            this.dgv.Size = new System.Drawing.Size(776, 297);
+            this.dgv.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -76,6 +76,7 @@ namespace ED_Clase2
             this.cmdProyeccionSimple.TabIndex = 0;
             this.cmdProyeccionSimple.Text = "Proyeccion Simple";
             this.cmdProyeccionSimple.UseVisualStyleBackColor = true;
+            this.cmdProyeccionSimple.Click += new System.EventHandler(this.cmdProyeccionSimple_Click);
             // 
             // cmdProyeccionMulti
             // 
@@ -85,6 +86,7 @@ namespace ED_Clase2
             this.cmdProyeccionMulti.TabIndex = 1;
             this.cmdProyeccionMulti.Text = "Proyeccion Multiatributo";
             this.cmdProyeccionMulti.UseVisualStyleBackColor = true;
+            this.cmdProyeccionMulti.Click += new System.EventHandler(this.cmdProyeccionMulti_Click);
             // 
             // cmdJuntar
             // 
@@ -133,13 +135,14 @@ namespace ED_Clase2
             this.cmdUnion.TabIndex = 0;
             this.cmdUnion.Text = "Union";
             this.cmdUnion.UseVisualStyleBackColor = true;
+            this.cmdUnion.Click += new System.EventHandler(this.cmdUnion_Click);
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.cmdSeleccionConvolucion);
             this.groupBox3.Controls.Add(this.cmdSeleccionMulti);
             this.groupBox3.Controls.Add(this.cmdSeleccionSimple);
-            this.groupBox3.Location = new System.Drawing.Point(274, 347);
+            this.groupBox3.Location = new System.Drawing.Point(286, 347);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(228, 153);
             this.groupBox3.TabIndex = 3;
@@ -163,6 +166,7 @@ namespace ED_Clase2
             this.cmdSeleccionMulti.TabIndex = 1;
             this.cmdSeleccionMulti.Text = "Seleccion Multiatributo";
             this.cmdSeleccionMulti.UseVisualStyleBackColor = true;
+            this.cmdSeleccionMulti.Click += new System.EventHandler(this.cmdSeleccionMulti_Click);
             // 
             // cmdSeleccionSimple
             // 
@@ -172,19 +176,20 @@ namespace ED_Clase2
             this.cmdSeleccionSimple.TabIndex = 0;
             this.cmdSeleccionSimple.Text = "Seleccion Simple";
             this.cmdSeleccionSimple.UseVisualStyleBackColor = true;
+            this.cmdSeleccionSimple.Click += new System.EventHandler(this.cmdSeleccionSimple_Click);
             // 
             // frmBaseDeDatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 518);
+            this.ClientSize = new System.Drawing.Size(800, 513);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv);
             this.Name = "frmBaseDeDatos";
             this.Text = "Base de Datos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -194,7 +199,7 @@ namespace ED_Clase2
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button cmdJuntar;
         private System.Windows.Forms.Button cmdProyeccionMulti;
