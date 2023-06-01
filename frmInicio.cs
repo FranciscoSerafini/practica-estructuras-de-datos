@@ -62,5 +62,11 @@ namespace ED_Clase2
         {
 
         }
+
+        private void baseDeDatosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmBaseDeDatos objVentana = new frmBaseDeDatos();
+            objVentana.ShowDialog();
+        }
     }
 }

@@ -51,6 +51,12 @@
     <Compile Include="clsLista-Simple.cs" />
     <Compile Include="clsListaDoble.cs" />
     <Compile Include="clsPila.cs" />
+    <Compile Include="frmBaseDeDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaseDeDatos.Designer.cs">
+      <DependentUpon>frmBaseDeDatos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBaseDeDatos.resx">
+      <DependentUpon>frmBaseDeDatos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </EmbeddedResource>

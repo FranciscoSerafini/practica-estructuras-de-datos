@@ -40,6 +40,8 @@
             this.noLinealesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.arbolBinarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.baseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.baseDeDatosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +53,7 @@
             this.sistemaToolStripMenuItem,
             this.linealesToolStripMenuItem,
             this.noLinealesToolStripMenuItem,
+            this.baseDeDatosToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -133,6 +136,21 @@
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(50, 24);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
+            // baseDeDatosToolStripMenuItem
+            // 
+            this.baseDeDatosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.baseDeDatosToolStripMenuItem1});
+            this.baseDeDatosToolStripMenuItem.Name = "baseDeDatosToolStripMenuItem";
+            this.baseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
+            this.baseDeDatosToolStripMenuItem.Text = "Base de Datos";
+            // 
+            // baseDeDatosToolStripMenuItem1
+            // 
+            this.baseDeDatosToolStripMenuItem1.Name = "baseDeDatosToolStripMenuItem1";
+            this.baseDeDatosToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+            this.baseDeDatosToolStripMenuItem1.Text = "Base de datos";
+            this.baseDeDatosToolStripMenuItem1.Click += new System.EventHandler(this.baseDeDatosToolStripMenuItem1_Click);
+            // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,6 +187,8 @@
         private System.Windows.Forms.ToolStripMenuItem noLinealesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem arbolBinarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem baseDeDatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem baseDeDatosToolStripMenuItem1;
     }
 }
 
