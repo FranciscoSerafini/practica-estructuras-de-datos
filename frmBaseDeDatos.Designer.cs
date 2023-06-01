@@ -31,9 +31,9 @@ namespace ED_Clase2
         {
             this.dgv = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmdProyeccionSimple = new System.Windows.Forms.Button();
-            this.cmdProyeccionMulti = new System.Windows.Forms.Button();
             this.cmdJuntar = new System.Windows.Forms.Button();
+            this.cmdProyeccionMulti = new System.Windows.Forms.Button();
+            this.cmdProyeccionSimple = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cmdDiferencia = new System.Windows.Forms.Button();
             this.cmdInterseccion = new System.Windows.Forms.Button();
@@ -68,15 +68,14 @@ namespace ED_Clase2
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Operaciones de Proyeccion";
             // 
-            // cmdProyeccionSimple
+            // cmdJuntar
             // 
-            this.cmdProyeccionSimple.Location = new System.Drawing.Point(13, 19);
-            this.cmdProyeccionSimple.Name = "cmdProyeccionSimple";
-            this.cmdProyeccionSimple.Size = new System.Drawing.Size(203, 23);
-            this.cmdProyeccionSimple.TabIndex = 0;
-            this.cmdProyeccionSimple.Text = "Proyeccion Simple";
-            this.cmdProyeccionSimple.UseVisualStyleBackColor = true;
-            this.cmdProyeccionSimple.Click += new System.EventHandler(this.cmdProyeccionSimple_Click);
+            this.cmdJuntar.Location = new System.Drawing.Point(13, 109);
+            this.cmdJuntar.Name = "cmdJuntar";
+            this.cmdJuntar.Size = new System.Drawing.Size(203, 23);
+            this.cmdJuntar.TabIndex = 2;
+            this.cmdJuntar.Text = "Juntar";
+            this.cmdJuntar.UseVisualStyleBackColor = true;
             // 
             // cmdProyeccionMulti
             // 
@@ -88,14 +87,15 @@ namespace ED_Clase2
             this.cmdProyeccionMulti.UseVisualStyleBackColor = true;
             this.cmdProyeccionMulti.Click += new System.EventHandler(this.cmdProyeccionMulti_Click);
             // 
-            // cmdJuntar
+            // cmdProyeccionSimple
             // 
-            this.cmdJuntar.Location = new System.Drawing.Point(13, 109);
-            this.cmdJuntar.Name = "cmdJuntar";
-            this.cmdJuntar.Size = new System.Drawing.Size(203, 23);
-            this.cmdJuntar.TabIndex = 2;
-            this.cmdJuntar.Text = "Juntar";
-            this.cmdJuntar.UseVisualStyleBackColor = true;
+            this.cmdProyeccionSimple.Location = new System.Drawing.Point(13, 19);
+            this.cmdProyeccionSimple.Name = "cmdProyeccionSimple";
+            this.cmdProyeccionSimple.Size = new System.Drawing.Size(203, 23);
+            this.cmdProyeccionSimple.TabIndex = 0;
+            this.cmdProyeccionSimple.Text = "Proyeccion Simple";
+            this.cmdProyeccionSimple.UseVisualStyleBackColor = true;
+            this.cmdProyeccionSimple.Click += new System.EventHandler(this.cmdProyeccionSimple_Click);
             // 
             // groupBox2
             // 
@@ -117,6 +117,7 @@ namespace ED_Clase2
             this.cmdDiferencia.TabIndex = 2;
             this.cmdDiferencia.Text = "Diferencia";
             this.cmdDiferencia.UseVisualStyleBackColor = true;
+            this.cmdDiferencia.Click += new System.EventHandler(this.cmdDiferencia_Click);
             // 
             // cmdInterseccion
             // 
@@ -126,6 +127,7 @@ namespace ED_Clase2
             this.cmdInterseccion.TabIndex = 1;
             this.cmdInterseccion.Text = "Interseccion";
             this.cmdInterseccion.UseVisualStyleBackColor = true;
+            this.cmdInterseccion.Click += new System.EventHandler(this.cmdInterseccion_Click);
             // 
             // cmdUnion
             // 

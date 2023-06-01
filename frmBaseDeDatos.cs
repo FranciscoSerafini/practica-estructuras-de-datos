@@ -55,5 +55,25 @@ namespace ED_Clase2
                 " SELECT * FROM Libro where IdIdioma = 3 ";
             objBaseDatos.Listar(dgv, varSQL);
         }
+
+        private void cmdInterseccion_Click(object sender, EventArgs e)
+        {
+            objBaseDatos = new clsBaseDatos();
+            String varSql = " Select * From libro " +
+                " where IdAutor = 5 and exists " +
+                " (Select * from libro where IdIdioma = 3) ";
+            objBaseDatos.Listar(dgv, varSql);
+
+        }
+
+        private void cmdDiferencia_Click(object sender, EventArgs e)
+        {
+            objBaseDatos = new clsBaseDatos();
+            String varSql = "Select * from libro " +
+                " where IdIdioma=3 and IdLibro not in " +
+                " (Select IdLibro from libro where IdPais =2 )" +
+                " order by 1 asc ";
+            objBaseDatos.Listar(dgv, varSql);
+        }
     }
 }

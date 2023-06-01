@@ -99,3 +99,4 @@ C:\Users\Alumno\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED_Clase2.f
 C:\Users\franc\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED_Clase2.frmInicio.resources
 C:\Users\Alumno\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED_Clase2.frmInicio.resources
 C:\Users\Alumno\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED_Clase2.frmBaseDeDatos.resources
+C:\Users\franc\Source\Repos\practica-estructuras-de-datos\obj\Debug\ED_Clase2.frmBaseDeDatos.resources
