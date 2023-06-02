@@ -68,5 +68,17 @@ namespace ED_Clase2
             frmBaseDeDatos objVentana = new frmBaseDeDatos();
             objVentana.ShowDialog();
         }
+
+        private void consultasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaBaseDeDatos objVentana = new frmConsultaBaseDeDatos();
+            objVentana.ShowDialog();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmConsultaPorOperaciones objVentana = new frmConsultaPorOperaciones();
+            objVentana.ShowDialog();
+        }
     }
 }

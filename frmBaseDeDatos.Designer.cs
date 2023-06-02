@@ -76,6 +76,7 @@ namespace ED_Clase2
             this.cmdJuntar.TabIndex = 2;
             this.cmdJuntar.Text = "Juntar";
             this.cmdJuntar.UseVisualStyleBackColor = true;
+            this.cmdJuntar.Click += new System.EventHandler(this.cmdJuntar_Click);
             // 
             // cmdProyeccionMulti
             // 
@@ -159,6 +160,7 @@ namespace ED_Clase2
             this.cmdSeleccionConvolucion.TabIndex = 2;
             this.cmdSeleccionConvolucion.Text = "Seleccion por convolucion";
             this.cmdSeleccionConvolucion.UseVisualStyleBackColor = true;
+            this.cmdSeleccionConvolucion.Click += new System.EventHandler(this.cmdSeleccionConvolucion_Click);
             // 
             // cmdSeleccionMulti
             // 

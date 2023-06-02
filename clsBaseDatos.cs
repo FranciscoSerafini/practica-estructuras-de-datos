@@ -39,7 +39,9 @@ namespace ED_Clase2
             catch (Exception e)
             {
 
-                
+                MessageBox.Show(e.Message);
+                conexion.Close();
+
             }
         }
 

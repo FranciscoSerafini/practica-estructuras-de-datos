@@ -59,9 +59,10 @@ namespace ED_Clase2
         private void cmdInterseccion_Click(object sender, EventArgs e)
         {
             objBaseDatos = new clsBaseDatos();
-            String varSql = " Select * From libro " +
-                " where IdAutor = 5 and exists " +
-                " (Select * from libro where IdIdioma = 3) ";
+            String varSql = "Select * from libro " +
+                 " where IdIdioma=3 and IdLibro in " +
+                 " (Select IdLibro from libro where IdPais =2 )" +
+                 " order by 1 asc ";
             objBaseDatos.Listar(dgv, varSql);
 
         }
@@ -74,6 +75,25 @@ namespace ED_Clase2
                 " (Select IdLibro from libro where IdPais =2 )" +
                 " order by 1 asc ";
             objBaseDatos.Listar(dgv, varSql);
+        }
+
+        private void cmdSeleccionConvolucion_Click(object sender, EventArgs e)
+        {
+            objBaseDatos = new clsBaseDatos();
+            String varSql = "Select *" +
+                " FROM (Select * from libro where IdIdioma > 1) as X " +
+                "WHERE IdPais = 2 ";
+            objBaseDatos.Listar(dgv, varSql);
+        }
+
+        private void cmdJuntar_Click(object sender, EventArgs e)
+        {
+            objBaseDatos = new clsBaseDatos();
+            String varSql = "Select Titulo, Nombre " +
+                "From Libro inner join Pais " +
+                "on Libro.IdPais = Pais.IdPais ";
+            objBaseDatos.Listar(dgv, varSql);
+
         }
     }
 }
