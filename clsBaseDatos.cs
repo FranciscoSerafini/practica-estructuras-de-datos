@@ -70,5 +70,10 @@ namespace ED_Clase2
                 MessageBox.Show(e.Message);
             }
         }
+
+        public void llenarCombo(ComboBox combo)
+        {
+
+        }
     }
 }

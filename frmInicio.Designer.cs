@@ -145,21 +145,21 @@
             // baseDeDatosToolStripMenuItem1
             // 
             this.baseDeDatosToolStripMenuItem1.Name = "baseDeDatosToolStripMenuItem1";
-            this.baseDeDatosToolStripMenuItem1.Size = new System.Drawing.Size(247, 24);
-            this.baseDeDatosToolStripMenuItem1.Text = "Base de datos";
+            this.baseDeDatosToolStripMenuItem1.Size = new System.Drawing.Size(351, 24);
+            this.baseDeDatosToolStripMenuItem1.Text = "Operaciones con tablas de base de datos";
             this.baseDeDatosToolStripMenuItem1.Click += new System.EventHandler(this.baseDeDatosToolStripMenuItem1_Click);
             // 
             // consultasToolStripMenuItem
             // 
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(247, 24);
-            this.consultasToolStripMenuItem.Text = "Consultas";
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(351, 24);
+            this.consultasToolStripMenuItem.Text = "Consultas en la base de datos";
             this.consultasToolStripMenuItem.Click += new System.EventHandler(this.consultasToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(247, 24);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(351, 24);
             this.toolStripMenuItem1.Text = "Consulta por operaciones";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
